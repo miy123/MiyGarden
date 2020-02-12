@@ -35,26 +35,6 @@ namespace MiyGarden.WorkSpace
             //new StreamTest().CreateOrWrite();
             //new DecroratorPattern().StartTest();
             //StartFileStream();
-            Console.WriteLine(ContainDuplicatedValue(new int[] { 1, 2, 0, 1 }));
-            Console.WriteLine(ContainDuplicatedValue(new int[] { 1, 2, 3 }));
-        }
-
-        static bool ContainDuplicatedValue(int[] input)
-        {
-            var bucket = new int[input.Length];
-            var free = 0;
-            foreach (var number in input)
-            {
-                if (free == 0)
-                {
-                    bucket[0] = number;
-                    free++;
-                }
-
-
-            }
-
-            return false;
         }
 
         private static void Test()
