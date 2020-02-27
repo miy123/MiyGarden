@@ -22,15 +22,16 @@ namespace MiyGarden.WorkSpace
     {
         static void Main(string[] args)
         {
-            Person a = null;
-            var b = a.Deeds;
-            Console.WriteLine(b);
+            new Kmp().Main();
+            //Person a = null;
+            //var b = a.Deeds;
+            //Console.WriteLine(b);
             //new ExpressionTest().LambdaExpressionTestExecute();
             //new ObserverPatternTest().Start();
             //new Jx3().Start();
             //StartTest();
-            //StartGame();
             //StartForLoop();
+            //StartGame();
             //StartCrawler();
             //StartEfPerformanceTest();
             //new LockTest().Main();
