@@ -11,7 +11,7 @@ namespace MiyGarden.Service.LeetCode
         {
             Console.WriteLine("2=" + this.StrStr("hello", "ll"));
             Console.WriteLine("-1=" + this.StrStr("aaaaa", "bba"));
-            Console.WriteLine("-1=" + this.StrStr("a", ""));
+            // Console.WriteLine("-1=" + this.StrStr("a", ""));
             Console.WriteLine("4=" + this.StrStr("aabaaabaaac", "aabaaac"));
         }
 

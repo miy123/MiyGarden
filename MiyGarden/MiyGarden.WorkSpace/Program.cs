@@ -20,6 +20,20 @@ namespace MiyGarden.WorkSpace
 {
     static class Program
     {
+        
+        class A
+        {
+            public string Name { set; get; }
+            public static bool operator ==(A a, A b) => a.Name == b.Name;
+            public static bool operator !=(A a, A b) => a.Name != b.Name;
+
+        }
+
+        class B
+        {
+
+        }
+
         static void Main(string[] args)
         {
             new Kmp().Main();
