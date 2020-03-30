@@ -25,6 +25,9 @@ namespace MiyGarden.Service.LeetCode
             var r = height.Length - 1;
             while (l < r)
             {
+                // 若移動長柱則新面積永遠<=現在的面積
+                // 若有l<r，則面積為l*(r-l)且必>=面積(l+n)*(r-(l+n))，不管長柱如何移動必小於等於原本面積
+                // 故移動短柱
                 maxarea = Math.Max(maxarea, Math.Min(height[l], height[r]) * (r - l));
                 if (height[l] < height[r])
                     l++;

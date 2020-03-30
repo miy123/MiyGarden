@@ -13,6 +13,7 @@ namespace MiyGarden.Service.LeetCode
             Console.WriteLine("-1=" + this.StrStr("aaaaa", "bba"));
             // Console.WriteLine("-1=" + this.StrStr("a", ""));
             Console.WriteLine("4=" + this.StrStr("aabaaabaaac", "aabaaac"));
+            Console.WriteLine(string.Join(",", this.GetFailureFunction("aabaaabaaac")));
         }
 
         /// <summary>
@@ -84,6 +85,7 @@ namespace MiyGarden.Service.LeetCode
                     }
                     else
                     {
+                        len = 0;
                         lps[i] = len;
                         i++;
                     }
