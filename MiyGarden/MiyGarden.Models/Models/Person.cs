@@ -1,4 +1,5 @@
 ﻿using MiyGarden.Models.Attributes;
+using MiyGarden.Service.MiyExtensions;
 
 namespace MiyGarden.Models.Models
 {
@@ -12,7 +13,6 @@ namespace MiyGarden.Models.Models
         [MyDescription("活躍朝代")]
         public string Dynasty { set; get; }
 
-        public string Deeds { set; get; }
+        public string Deeds => string.Join(",", DescriptionExtension.GetDescription<Person>());
     }
-
 }

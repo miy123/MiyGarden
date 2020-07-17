@@ -10,18 +10,19 @@ using MiyGarden.Service.Pattrens;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Diagnostics.Contracts;
 using System.IO;
 using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading;
+using System.Threading.Tasks;
 
 namespace MiyGarden.WorkSpace
 {
     static class Program
     {
-        
-        class A
+        public class A
         {
             public string Name { set; get; }
             public static bool operator ==(A a, A b) => a.Name == b.Name;
@@ -29,17 +30,10 @@ namespace MiyGarden.WorkSpace
 
         }
 
-        class B
-        {
-
-        }
-
         static void Main(string[] args)
         {
-            new Kmp().Main();
-            //Person a = null;
-            //var b = a.Deeds;
-            //Console.WriteLine(b);
+            // await new TaskTest().StartTest();
+            //new Kmp().Main();
             //new ExpressionTest().LambdaExpressionTestExecute();
             //new ObserverPatternTest().Start();
             //new Jx3().Start();
@@ -49,46 +43,15 @@ namespace MiyGarden.WorkSpace
             //StartCrawler();
             //StartEfPerformanceTest();
             //new LockTest().Main();
-            //Test();
+            //CollectionTest();
             //new StreamTest().CreateOrWrite();
             //new DecroratorPattern().StartTest();
             //StartFileStream();
         }
 
-        private static void Test()
+        private static void CollectionTest()
         {
             // a = b?.a => a 會重新被賦值 
-            Dictionary<int, string> dicts = new Dictionary<int, string>
-            {
-                { 1, "i am 1" },
-                { 2, "i am 2" }
-            };
-
-            var lists = dicts.Where(x => x.Key > 1).Select(x => new Person
-            {
-                Id = x.Key,
-                Name = "default"
-            }).ToList();
-
-            var lists2 = dicts.Select(x => new Person
-            {
-                Id = x.Key,
-                Name = x.Value
-            }).ToList();
-
-            foreach (var item in lists2)
-            {
-                var temp = lists.FirstOrDefault(x => x.Id == item.Id);
-                Console.WriteLine(item.Name);
-                item.Name = temp?.Id.ToString();
-                Console.WriteLine(item.Name);
-                Console.WriteLine("------");
-            }
-
-            #region array test
-            Dictionary<string, string> openWith = new Dictionary<string, string>
-            {{ "txt", "notepad.exe" },{ "bmp", "paint.exe" },{ "dib", "paint.exe" },{ "rtf", "wordpad.exe" }};
-            Console.WriteLine(openWith["txt"]);
             var arry1D = new int[] { 1, 2, 3, 4 };
             var arry1D2 = new int[] { 4, 7, 8, 9 };
             var arry2D = new int[4, 2];
@@ -110,11 +73,9 @@ namespace MiyGarden.WorkSpace
             });
             Show(hasSet);
             Show(list);
-            #endregion
         }
         private static void StartTest()
         {
-            //distinct test
             var test1 = new List<Person> {
                         new Person
                         {
@@ -130,12 +91,8 @@ namespace MiyGarden.WorkSpace
                         {
                             Name = "文天祥",
                             Dynasty = "南宋"
-                        }}.Select(x => new
-                        {
-                            x.Name,
-                            x.Dynasty,
-                            Deeds = string.Join(",", DescriptionExtension.GetDescription<Person>())
-                        }).ToList();
+                        }};
+
             test1.Sort((x, y) => x.Name == "張世傑" ? 1 : -1);
             Show(test1.Distinct(x => x.Name));
             var numbers = new int[] { 1, 2, 3, 4, 5, 6 };
@@ -168,6 +125,7 @@ namespace MiyGarden.WorkSpace
             }
             Console.ReadKey();
         }
+
         private static void StartCrawler()
         {
             var url = "https://forum.gamer.com.tw/B.php?bsn=16357";
@@ -203,6 +161,7 @@ namespace MiyGarden.WorkSpace
             crawler.Start(new Uri(url)).Wait();
             Console.ReadKey();
         }
+
         private static void StartEfPerformanceTest()
         {
             //var testService = new EFTest();
@@ -221,6 +180,7 @@ namespace MiyGarden.WorkSpace
             //    Console.WriteLine(result.Message);
             //Console.ReadKey();
         }
+
         private static void Show<T>(IEnumerable<T> lists)
         {
             void _Show()
