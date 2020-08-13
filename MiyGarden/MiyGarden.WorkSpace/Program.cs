@@ -7,6 +7,7 @@ using MiyGarden.Service.MiyExtensions;
 using MiyGarden.Service.ML;
 using MiyGarden.Service.Others;
 using MiyGarden.Service.Pattrens;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -22,16 +23,54 @@ namespace MiyGarden.WorkSpace
 {
     static class Program
     {
+        private static List<Person> List = new List<Person> {
+                        new Person
+                        {
+                            Name = "文天祥",
+                            Dynasty = "宋朝"
+                        },
+                        new Person
+                        {
+                            Name = "張世傑",
+                            Dynasty = "宋朝"
+                        },
+                        new Person
+                        {
+                            Name = "文天祥",
+                            Dynasty = "南宋"
+                        }};
+
         public class A
         {
             public string Name { set; get; }
             public static bool operator ==(A a, A b) => a.Name == b.Name;
             public static bool operator !=(A a, A b) => a.Name != b.Name;
+        }
 
+        static IEnumerable<Person> Ha()
+        {
+            return List.Where(x => true);
+        }
+
+        static List<Person> Ha1()
+        {
+            return List;
+        }
+
+        static IEnumerable<Person> Ha2()
+        {
+            return List;
         }
 
         static void Main(string[] args)
         {
+            var str = "{\"Name\":\"clark\",\"MediaType\":2}";
+            var model = JsonConvert.DeserializeObject<Person>(str);
+            Console.WriteLine(model.MediaType);
+            var a = Ha();
+            var b = Ha1();
+            var c = Ha2();
+
             // await new TaskTest().StartTest();
             //new Kmp().Main();
             //new ExpressionTest().LambdaExpressionTestExecute();
@@ -76,25 +115,8 @@ namespace MiyGarden.WorkSpace
         }
         private static void StartTest()
         {
-            var test1 = new List<Person> {
-                        new Person
-                        {
-                            Name = "文天祥",
-                            Dynasty = "宋朝"
-                        },
-                        new Person
-                        {
-                            Name = "張世傑",
-                            Dynasty = "宋朝"
-                        },
-                        new Person
-                        {
-                            Name = "文天祥",
-                            Dynasty = "南宋"
-                        }};
-
-            test1.Sort((x, y) => x.Name == "張世傑" ? 1 : -1);
-            Show(test1.Distinct(x => x.Name));
+            List.Sort((x, y) => x.Name == "張世傑" ? 1 : -1);
+            Show(List.Distinct(x => x.Name));
             var numbers = new int[] { 1, 2, 3, 4, 5, 6 };
             Show(numbers.Where(n => n > 3));
             Console.WriteLine(numbers.Aggregate((start, next) => start + next) + " " + numbers.Sum());

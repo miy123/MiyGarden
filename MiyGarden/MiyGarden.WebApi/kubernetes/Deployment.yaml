@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: webapplication-deployment
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: webappfordemo
+  template:
+    metadata:
+      labels:
+        app: webappfordemo
+    spec:
+      containers:
+      - name: miygardenwebapi
+        image: miygardenwebapi:latest
+        imagePullPolicy: Never
+        resources:
+          limits:
+            memory: "128Mi"
+            cpu: "100m"
+        ports:
+        - containerPort: 80

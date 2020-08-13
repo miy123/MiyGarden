@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "MiyGarden.WorkSpace": {
+      "commandName": "Project"
+    },
+    "Docker": {
+      "commandName": "Docker"
+    }
+  }
+}
