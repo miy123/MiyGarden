@@ -15,28 +15,32 @@ using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading;
+using System.Threading.Tasks;
 
 namespace MiyGarden.WorkSpace
 {
     static class Program
     {
-        
-        class A
+        static async Task  Main(string[] args)
         {
-            public string Name { set; get; }
-            public static bool operator ==(A a, A b) => a.Name == b.Name;
-            public static bool operator !=(A a, A b) => a.Name != b.Name;
+            for(var i = 3; i <= 100; i++)
+            {
+                Console.WriteLine($"0{i}0");
+            }
 
-        }
-
-        class B
-        {
-
-        }
-
-        static void Main(string[] args)
-        {
-            new Kmp().Main();
+            Console.WriteLine("工作執行緒 #{0}", Thread.CurrentThread.ManagedThreadId);
+            await aaaa();
+            //var a =  new Task(() => Console.WriteLine("工作執行緒 #{0}", Thread.CurrentThread.ManagedThreadId));
+            //a.Start();
+            //try
+            //{
+            //   var a = MainAsync();
+            //    a.Wait();
+            //}
+            //catch (Exception ex)
+            //{
+            //}
+            //new Kmp().Main();
             //Person a = null;
             //var b = a.Deeds;
             //Console.WriteLine(b);
@@ -53,6 +57,40 @@ namespace MiyGarden.WorkSpace
             //new StreamTest().CreateOrWrite();
             //new DecroratorPattern().StartTest();
             //StartFileStream();
+        }
+
+        static Task aaaa()
+        {
+            var a = new Task(() => Console.WriteLine("工作執行緒 #{0}", Thread.CurrentThread.ManagedThreadId));
+            return a;
+        }
+
+        static async Task MainAsync()
+        {
+            try
+            {
+                // Asynchronous implementation.
+                await Task.Delay(1000);
+                throw new OperationCanceledException("lalala");
+            }
+            catch (Exception)
+            {
+                throw;
+                // Handle exceptions.
+            }
+        }
+
+        class A
+        {
+            public string Name { set; get; }
+            public static bool operator ==(A a, A b) => a.Name == b.Name;
+            public static bool operator !=(A a, A b) => a.Name != b.Name;
+
+        }
+
+        class B
+        {
+
         }
 
         private static void Test()

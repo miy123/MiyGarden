@@ -27,6 +27,8 @@ namespace MiyGarden.Service.LeetCode
                     table[cha]++;
                 }
             }
+
+            return string.Empty;
         }
 
         Data GetData(string str, int i)
