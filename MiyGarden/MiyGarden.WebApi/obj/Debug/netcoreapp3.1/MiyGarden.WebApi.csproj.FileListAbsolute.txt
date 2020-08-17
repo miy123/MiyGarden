@@ -24,5 +24,5 @@ D:\git\github\MiyGarden\MiyGarden\MiyGarden.WebApi\bin\Debug\netcoreapp3.1\Syste
 D:\git\github\MiyGarden\MiyGarden\MiyGarden.WebApi\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
 D:\git\github\MiyGarden\MiyGarden\MiyGarden.WebApi\bin\Debug\netcoreapp3.1\Newtonsoft.Json.Bson.dll
 D:\git\github\MiyGarden\MiyGarden\MiyGarden.WebApi\obj\Debug\netcoreapp3.1\MiyGarden.WebApi.csproj.CoreCompileInputs.cache
-D:\git\github\MiyGarden\MiyGarden\MiyGarden.WebApi\obj\Debug\netcoreapp3.1\MiyGarden.WebApi.MvcApplicationPartsAssemblyInfo.cache
 D:\git\github\MiyGarden\MiyGarden\MiyGarden.WebApi\obj\Debug\netcoreapp3.1\MiyGarden.WebApi.csproj.CopyComplete
+D:\git\github\MiyGarden\MiyGarden\MiyGarden.WebApi\obj\Debug\netcoreapp3.1\MiyGarden.WebApi.genruntimeconfig.cache
