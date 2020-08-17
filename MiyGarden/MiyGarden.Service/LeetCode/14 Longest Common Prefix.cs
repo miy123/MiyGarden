@@ -28,7 +28,7 @@ namespace MiyGarden.Service.LeetCode
                 }
             }
 
-            return "";
+            return string.Empty;
         }
 
         Data GetData(string str, int i)
