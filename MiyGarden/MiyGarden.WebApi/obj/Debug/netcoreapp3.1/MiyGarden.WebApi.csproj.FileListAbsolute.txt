@@ -12,7 +12,17 @@ D:\git\github\MiyGarden\MiyGarden\MiyGarden.WebApi\bin\Debug\netcoreapp3.1\MiyGa
 D:\git\github\MiyGarden\MiyGarden\MiyGarden.WebApi\bin\Debug\netcoreapp3.1\MiyGarden.WebApi.runtimeconfig.dev.json
 D:\git\github\MiyGarden\MiyGarden\MiyGarden.WebApi\bin\Debug\netcoreapp3.1\MiyGarden.WebApi.dll
 D:\git\github\MiyGarden\MiyGarden\MiyGarden.WebApi\bin\Debug\netcoreapp3.1\MiyGarden.WebApi.pdb
+<<<<<<< HEAD
+=======
 D:\git\github\MiyGarden\MiyGarden\MiyGarden.WebApi\obj\Debug\netcoreapp3.1\MiyGarden.WebApi.MvcApplicationPartsAssemblyInfo.cache
+>>>>>>> 28fc654a580f849bc8f0067c315976205e38e3c6
 D:\git\github\MiyGarden\MiyGarden\MiyGarden.WebApi\obj\Debug\netcoreapp3.1\MiyGarden.WebApi.dll
 D:\git\github\MiyGarden\MiyGarden\MiyGarden.WebApi\obj\Debug\netcoreapp3.1\MiyGarden.WebApi.pdb
 D:\git\github\MiyGarden\MiyGarden\MiyGarden.WebApi\obj\Debug\netcoreapp3.1\MiyGarden.WebApi.csprojAssemblyReference.cache
+D:\git\github\MiyGarden\MiyGarden\MiyGarden.WebApi\bin\Debug\netcoreapp3.1\System.Net.Http.Formatting.dll
+D:\git\github\MiyGarden\MiyGarden\MiyGarden.WebApi\bin\Debug\netcoreapp3.1\System.Web.Http.dll
+D:\git\github\MiyGarden\MiyGarden\MiyGarden.WebApi\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+D:\git\github\MiyGarden\MiyGarden\MiyGarden.WebApi\bin\Debug\netcoreapp3.1\Newtonsoft.Json.Bson.dll
+D:\git\github\MiyGarden\MiyGarden\MiyGarden.WebApi\obj\Debug\netcoreapp3.1\MiyGarden.WebApi.csproj.CoreCompileInputs.cache
+D:\git\github\MiyGarden\MiyGarden\MiyGarden.WebApi\obj\Debug\netcoreapp3.1\MiyGarden.WebApi.csproj.CopyComplete
+D:\git\github\MiyGarden\MiyGarden\MiyGarden.WebApi\obj\Debug\netcoreapp3.1\MiyGarden.WebApi.genruntimeconfig.cache
