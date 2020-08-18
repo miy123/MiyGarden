@@ -27,6 +27,7 @@ namespace MiyGarden.WebApi.Controllers
             _logger = logger;
         }
 
+        [Route("[action]")]
         [HttpGet]
         public IEnumerable<WeatherForecast> Get()
         {
@@ -38,6 +39,15 @@ namespace MiyGarden.WebApi.Controllers
                 Summary = Summaries[rng.Next(Summaries.Length)]
             })
             .ToArray();
+        }
+
+        [Route("[action]")]
+        [HttpGet]
+        public ActionResult Hello()
+        {
+            var res = CreatedAtAction(nameof(Hello), new { id = 123 });
+            res.ContentTypes.Add(new MediaTypeHeaderValue("application/ld+json"));
+            return res;
         }
     }
 }
