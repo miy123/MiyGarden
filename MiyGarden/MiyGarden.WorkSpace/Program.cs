@@ -64,7 +64,7 @@ namespace MiyGarden.WorkSpace
 
         static void Main(string[] args)
         {
-            var str = "{\"Name\":\"clark\",\"MediaType\":2}";
+            var str = "{\"Name\":\"clark\",\"MediaType\":2,\"MediaType123\":2}";
             var model = JsonConvert.DeserializeObject<Person>(str);
             Console.WriteLine(model.MediaType);
             var a = Ha();

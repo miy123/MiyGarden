@@ -8,5 +8,6 @@ spec:
     app: webappfordemo
   ports:
   - protocol: TCP
-    port: 9000
-    targetPort: 62667
+    port: 80
+    targetPort: 80
+    nodePort: 31000

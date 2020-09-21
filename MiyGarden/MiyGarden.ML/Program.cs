@@ -8,7 +8,7 @@ namespace MiyGarden.ML
         {
             var mlTest = new MLTest();
 
-            mlTest.InitIris();
+            //mlTest.InitIris();
             mlTest.BinaryClassification();
         }
     }
