@@ -8,10 +8,21 @@ namespace MiyGarden.Algorithm
     {
         static void Main(string[] args)
         {
-            SearchAlgorithm();
-            FibonacciSequence();
-            ClusterAlgorithm();
-            Geometric();
+            //SearchAlgorithm();
+            SortAlgorithm();
+            //FibonacciSequence();
+            //ClusterAlgorithm();
+            //Geometric();
+        }
+
+        /// <summary>
+        /// 搜尋演算法
+        /// </summary>
+        private static void SortAlgorithm()
+        {
+            Console.WriteLine("==========快速排序=========");
+            Console.WriteLine(string.Join(',', new SortAlgorithm().QuickSort(new int[] { 5, 3, 100, -4, 30, 40, 60, 22, 14, 6 })));
+            Console.WriteLine("===========================");
         }
 
         /// <summary>
