@@ -15,7 +15,6 @@ namespace MiyGarden.Service.LeetCode
             Show(MergeTwoLists(null, null));
             Show(MergeTwoLists(null, new ListNode(0, null)));
             Show(MergeTwoLists(new ListNode(2, null), new ListNode(1, null)));
-
             Show(MergeTwoLists(new ListNode(5, null), new ListNode(1, new ListNode(2, new ListNode(4, null)))));
         }
 
@@ -31,64 +30,43 @@ namespace MiyGarden.Service.LeetCode
             Console.WriteLine(string.Join(',', result));
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="l1"></param>
+        /// <param name="l2"></param>
+        /// <returns></returns>
         public ListNode MergeTwoLists(ListNode l1, ListNode l2)
         {
-            if (l1 == null || (l1 != null && l2 != null && l1.val > l2.val))
+            // 紀錄目前欲往後接的位置(head的尾部)
+            var dummy = new ListNode(-1);
+            var head = dummy;
+
+            while (l1 != null && l2 != null)
             {
-                var temp = l1;
-                l1 = l2;
-                l2 = temp;
-            }
-
-            return MergeTwoLists(l1, l2, 0);
-        }
-
-        private ListNode MergeTwoLists(ListNode l1, ListNode l2, int type)
-        {
-            if (l2 == null) return l1;
-            if (l1 == null) return l2;
-
-            if (l1.val == l2.val)
-            {
-                l1.next = new ListNode(l2.val, l1.next);
-                l2 = l2.next;
-                l1.next.next = MergeTwoLists(l1.next.next, l2, 0);
-                return l1;
-            }
-
-            if (l1.val > l2.val)
-            {
-                if (type == 0)
+                if (l1.val <= l2.val)
                 {
-                    var result = MergeTwoLists(l1, l2.next, 1);
-                    l1.next = new ListNode(result.val, l1.next);
-                    l2 = l2.next;
-                    l1.next.next = MergeTwoLists(l1.next.next, l2, 0);
-                    return l1;
+                    dummy.next = l1;
+                    l1 = l1.next;
                 }
-                if (type == 1)
-                    return MergeTwoLists(l1, l2.next, 1);
-                if (type == 2)
-                    return l2;
-            }
-
-            if (l1.val < l2.val)
-            {
-                if (type == 0)
+                else
                 {
-                    var result = MergeTwoLists(l1.next, l2, 2);
-                    l1.next = new ListNode(result.val, l1.next);
+                    dummy.next = l2;
                     l2 = l2.next;
-                    l1.next.next = MergeTwoLists(l1.next.next, l2, 0);
-                    return l1;
                 }
-                if (type == 2)
-                    return MergeTwoLists(l1.next, l2, 2);
-                if (type == 1)
-                    return l1;
+                dummy = dummy.next;
             }
 
-            return null;
+            if (l1 != null)
+            {
+                dummy.next = l1;
+            }
+            else
+            {
+                dummy.next = l2;
+            }
+
+            return head.next;
         }
 
         public class ListNode
