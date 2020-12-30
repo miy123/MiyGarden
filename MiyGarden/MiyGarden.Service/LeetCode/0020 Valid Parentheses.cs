@@ -81,14 +81,14 @@ namespace MiyGarden.Service.LeetCode
                     st.Push(cuc);
                 else
                 {
-                    if (!st.Any()) return false;
+                    if (st.Count == 0) return false;
                     var ce = st.Pop();
                     if (!((cuc == ')' && ce == '(') || (cuc == '}' && ce == '{') || (cuc == ']' && ce == '[')))
                         return false;
                 }
             }
 
-            return !st.Any();
+            return st.Count == 0;
         }
     }
 }
