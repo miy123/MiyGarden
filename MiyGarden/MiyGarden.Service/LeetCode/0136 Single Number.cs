@@ -10,11 +10,17 @@ namespace MiyGarden.Service.LeetCode
     {
         public int Number => 136;
 
-        public void Main()
+        public string[] Main()
         {
             //Console.WriteLine("1=" + SingleNumber(new int[] { 2, 2, 1 }));
             Console.WriteLine("4=" + SingleNumber(new int[] { 9, 4, 1, 2, 1, 6, 2, 9, 6 }));
             //Console.WriteLine("1=" + SingleNumber(new int[] { 1 }));
+            var result = new string[]
+            {
+            };
+            foreach (var x in result)
+                Console.WriteLine(x);
+            return result;
         }
 
         public int SingleNumber(int[] nums)
