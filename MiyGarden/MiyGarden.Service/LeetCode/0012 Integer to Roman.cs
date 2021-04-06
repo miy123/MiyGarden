@@ -22,13 +22,20 @@ namespace MiyGarden.Service.LeetCode
 
         private readonly int[] indexs = { 1, 5, 10, 50, 100, 500, 1000 };
 
-        public void Main()
+        public string[] Main()
         {
             Console.WriteLine("III=" + this.IntToRoman(3));
             Console.WriteLine("IV=" + this.IntToRoman(4));
             Console.WriteLine("IX=" + this.IntToRoman(9));
             Console.WriteLine("LVIII=" + this.IntToRoman(58));
             Console.WriteLine("MCMXCIV=" + this.IntToRoman(1994));
+
+            var result = new string[]
+            {
+            };
+            foreach (var x in result)
+                Console.WriteLine(x);
+            return result;
         }
 
         public string IntToRoman(int num)

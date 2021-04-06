@@ -4,6 +4,6 @@
     {
         public int Number { get; }
 
-        public void Main();
+        public string[] Main();
     }
 }

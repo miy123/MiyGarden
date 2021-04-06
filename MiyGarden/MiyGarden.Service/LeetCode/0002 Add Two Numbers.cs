@@ -11,9 +11,15 @@ namespace MiyGarden.Service.LeetCode
     {
         public int Number => 2;
 
-        public void Main()
+        public string[] Main()
         {
+            var result = new string[]
+            {
 
+            };
+            foreach (var x in result)
+                Console.WriteLine(x);
+            return result;
         }
 
         public ListNode AddTwoNumbers(ListNode l1, ListNode l2)

@@ -7,10 +7,16 @@ namespace MiyGarden.Service.LeetCode
     {
         public int Number => 1;
 
-        public void Main()
+        public string[] Main()
         {
-            Console.WriteLine("0,1=" + string.Join(',', this.TwoSum(new int[] { 2, 7, 11, 15 }, 9)));
-            Console.WriteLine("0,1=" + string.Join(',', this.TwoSum1(new int[] { 2, 7, 11, 15 }, 9)));
+            var result = new string[]
+            {
+                "0,1=" + string.Join(',', this.TwoSum(new int[] { 2, 7, 11, 15 }, 9)),
+                "0,1=" + string.Join(',', this.TwoSum1(new int[] { 2, 7, 11, 15 }, 9))
+            };
+            foreach (var x in result)
+                Console.WriteLine(x);
+            return result;
         }
 
         public int[] TwoSum(int[] nums, int target)

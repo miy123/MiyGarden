@@ -9,13 +9,19 @@ namespace MiyGarden.Service.LeetCode
     {
         public int Number => 581;
 
-        public void Main()
+        public string[] Main()
         {
             Console.WriteLine("5=" + this.FindUnsortedSubarray(new int[] { 2, 6, 4, 8, 10, 9, 15 }));
             Console.WriteLine("3=" + this.FindUnsortedSubarray(new int[] { 2, 3, 3, 2, 4 }));
             Console.WriteLine("3=" + this.FindUnsortedSubarray(new int[] { 1, 2, 4, 5, 3 }));
             Console.WriteLine("4=" + this.FindUnsortedSubarray(new int[] { 1, 3, 2, 5, 4 }));
             Console.WriteLine("4=" + this.FindUnsortedSubarray(new int[] { 1, 3, 5, 4, 2 }));
+            var result = new string[]
+            {
+            };
+            foreach (var x in result)
+                Console.WriteLine(x);
+            return result;
         }
 
         public int FindUnsortedSubarray(int[] nums)

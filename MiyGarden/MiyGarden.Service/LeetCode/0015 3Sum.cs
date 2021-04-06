@@ -9,7 +9,7 @@ namespace MiyGarden.Service.LeetCode
     {
         public int Number => 15;
 
-        public void Main()
+        public string[] Main()
         {
             this.Show(this.ThreeSum(new int[] { -4, -1, -1, 0, 1, 2 }));
             this.Show(this.ThreeSum2(new int[] { -4, -1, -1, 0, 1, 2 }));
@@ -18,6 +18,13 @@ namespace MiyGarden.Service.LeetCode
             //this.Show(this.ThreeSum(new int[] { 0, -4, -1, -4, -2, -3, 2 }));
             this.Show(this.ThreeSum(new int[] { -2, 0, 3, -1, 4, 0, 3, 4, 1, 1, 1, -3, -5, 4, 0 }));
             this.Show(this.ThreeSum2(new int[] { -2, 0, 3, -1, 4, 0, 3, 4, 1, 1, 1, -3, -5, 4, 0 }));
+
+            var result = new string[]
+            {
+            };
+            foreach (var x in result)
+                Console.WriteLine(x);
+            return result;
         }
 
         public IList<IList<int>> ThreeSum(int[] nums)

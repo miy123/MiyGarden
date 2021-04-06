@@ -10,11 +10,18 @@ namespace MiyGarden.Service.LeetCode
     {
         public int Number => 22;
 
-        public void Main()
+        public string[] Main()
         {
             Console.WriteLine("() = " + string.Join(',', GenerateParenthesis(1)));
             Console.WriteLine("((())),(()()),(())(),()(()),()()() = " + string.Join(',', GenerateParenthesis(3)));
             Console.WriteLine("(((()))),((()())),((())()),((()))(),(()(())),(()()()),(()())(),(())(()),(())()(),()((())),()(()()),()(())(),()()(()),()()()() = " + string.Join(',', GenerateParenthesis(4)));
+
+            var result = new string[]
+            {
+            };
+            foreach (var x in result)
+                Console.WriteLine(x);
+            return result;
         }
 
         public IList<string> GenerateParenthesis(int n)

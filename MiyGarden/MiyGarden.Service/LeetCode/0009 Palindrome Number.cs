@@ -11,13 +11,19 @@ namespace MiyGarden.Service.LeetCode
     {
         public int Number => 9;
 
-        public void Main()
+        public string[] Main()
         {
             Console.WriteLine(this.IsPalindrome(-123));
             Console.WriteLine(this.IsPalindrome(10));
             Console.WriteLine(this.IsPalindrome(121));
             Console.WriteLine(this.IsPalindrome(1));
             Console.WriteLine(this.IsPalindrome(100));
+            var result = new string[]
+            {
+            };
+            foreach (var x in result)
+                Console.WriteLine(x);
+            return result;
         }
 
         /// <summary>

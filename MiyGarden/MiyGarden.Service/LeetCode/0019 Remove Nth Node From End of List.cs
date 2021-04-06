@@ -7,9 +7,16 @@ namespace MiyGarden.Service.LeetCode
     {
         public int Number => 19;
 
-        public void Main()
+        public string[] Main()
         {
             Console.WriteLine(RemoveNthFromEnd(new ListNode() { val = 1, next = new ListNode() { val = 2, next = new ListNode() { val = 3, next = new ListNode() { val = 4, next = new ListNode() { val = 5 } } } } }, 2));
+
+            var result = new string[]
+            {
+            };
+            foreach (var x in result)
+                Console.WriteLine(x);
+            return result;
         }
 
         public class ListNode

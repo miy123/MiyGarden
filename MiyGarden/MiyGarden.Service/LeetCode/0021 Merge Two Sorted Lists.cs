@@ -9,13 +9,20 @@ namespace MiyGarden.Service.LeetCode
     {
         public int Number => 21;
 
-        public void Main()
+        public string[] Main()
         {
             Show(MergeTwoLists(new ListNode(1, new ListNode(2, new ListNode(4, null))), new ListNode(1, new ListNode(3, new ListNode(4, null)))));
             Show(MergeTwoLists(null, null));
             Show(MergeTwoLists(null, new ListNode(0, null)));
             Show(MergeTwoLists(new ListNode(2, null), new ListNode(1, null)));
             Show(MergeTwoLists(new ListNode(5, null), new ListNode(1, new ListNode(2, new ListNode(4, null)))));
+
+            var result = new string[]
+            {
+            };
+            foreach (var x in result)
+                Console.WriteLine(x);
+            return result;
         }
 
         private void Show(ListNode listNode)

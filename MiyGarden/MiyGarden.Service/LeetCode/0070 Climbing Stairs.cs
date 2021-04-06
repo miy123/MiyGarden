@@ -9,25 +9,46 @@ namespace MiyGarden.Service.LeetCode
     {
         public int Number => 70;
 
-        public void Main()
+        public string[] Main()
         {
-            //Console.WriteLine("2 = " + ClimbStairs(2));
-            //Console.WriteLine("3 = " + ClimbStairs(3));
-            //Console.WriteLine("5 = " + ClimbStairs(4));
-            //Console.WriteLine("8 = " + ClimbStairs(5));
+            Console.WriteLine("2 = " + ClimbStairs(2));
+            Console.WriteLine("3 = " + ClimbStairs(3));
+            Console.WriteLine("5 = " + ClimbStairs(4));
+            Console.WriteLine("8 = " + ClimbStairs(5));
 
-            //Console.WriteLine("8 = " + ClimbStairs(10));
-            //Console.WriteLine("14930352 = " + ClimbStairs(35));
-            //Console.WriteLine("1134903170 = " + ClimbStairs(44));
+            Console.WriteLine("14930352 = " + ClimbStairs(35));
+            Console.WriteLine("24157817 = " + ClimbStairs(36));
+            Console.WriteLine("39088169 = " + ClimbStairs(37));
+            Console.WriteLine("63245986 = " + ClimbStairs(38));
+            Console.WriteLine("102334155 = " + ClimbStairs(39));
+            Console.WriteLine("165580141 = " + ClimbStairs(40));
+            Console.WriteLine("267914296 = " + ClimbStairs(41));
+            Console.WriteLine("433494437 = " + ClimbStairs(42));
+            Console.WriteLine("701408733 = " + ClimbStairs(43));
+            Console.WriteLine("1134903170 = " + ClimbStairs(44));
 
             Console.WriteLine("2 = " + ClimbStairs2(2));
             Console.WriteLine("3 = " + ClimbStairs2(3));
             Console.WriteLine("5 = " + ClimbStairs2(4));
             Console.WriteLine("8 = " + ClimbStairs2(5));
 
-            Console.WriteLine("8 = " + ClimbStairs2(10));
             Console.WriteLine("14930352 = " + ClimbStairs2(35));
+            Console.WriteLine("24157817 = " + ClimbStairs2(36));
+            Console.WriteLine("39088169 = " + ClimbStairs2(37));
+            Console.WriteLine("63245986 = " + ClimbStairs2(38));
+            Console.WriteLine("102334155 = " + ClimbStairs2(39));
+            Console.WriteLine("165580141 = " + ClimbStairs2(40));
+            Console.WriteLine("267914296 = " + ClimbStairs2(41));
+            Console.WriteLine("433494437 = " + ClimbStairs2(42));
+            Console.WriteLine("701408733 = " + ClimbStairs2(43));
             Console.WriteLine("1134903170 = " + ClimbStairs2(44));
+
+            var result = new string[]
+            {
+            };
+            foreach (var x in result)
+                Console.WriteLine(x);
+            return result;
         }
 
         public int ClimbStairs(int n)
@@ -62,6 +83,11 @@ namespace MiyGarden.Service.LeetCode
                 {
                     result /= dividend;
                     dividend = 1;
+                }
+                if (result % 2 == 0 && dividend % 2 == 0)
+                {
+                    result /= 2;
+                    dividend /= 2;
                 }
                 result *= (ulong)i;
             }

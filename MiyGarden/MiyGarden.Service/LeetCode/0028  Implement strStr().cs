@@ -7,13 +7,20 @@ namespace MiyGarden.Service.LeetCode
     {
         public int Number => 28;
 
-        public void Main()
+        public string[] Main()
         {
             Console.WriteLine("2=" + this.StrStr("hello", "ll"));
             Console.WriteLine("-1=" + this.StrStr("aaaaa", "bba"));
             // Console.WriteLine("-1=" + this.StrStr("a", ""));
             Console.WriteLine("4=" + this.StrStr("aabaaabaaac", "aabaaac"));
             Console.WriteLine(string.Join(",", this.GetFailureFunction("aabaaabaaac")));
+
+            var result = new string[]
+            {
+            };
+            foreach (var x in result)
+                Console.WriteLine(x);
+            return result;
         }
 
         /// <summary>

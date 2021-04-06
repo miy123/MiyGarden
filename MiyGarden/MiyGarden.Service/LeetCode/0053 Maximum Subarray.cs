@@ -14,13 +14,20 @@ namespace MiyGarden.Service.LeetCode
     {
         public int Number => 53;
 
-        public void Main()
+        public string[] Main()
         {
             Console.WriteLine(MaxSubArray(new int[] { -2, 1, -3, 4, -1, 2, 1, -5, 4 }));
             Console.WriteLine(MaxSubArray(new int[] { 1 }));
             Console.WriteLine(MaxSubArray(new int[] { 0 }));
             Console.WriteLine(MaxSubArray(new int[] { -1 }));
             Console.WriteLine(MaxSubArray(new int[] { -2147483647 }));
+
+            var result = new string[]
+            {
+            };
+            foreach (var x in result)
+                Console.WriteLine(x);
+            return result;
         }
 
         public int MaxSubArray(int[] nums)

@@ -9,15 +9,27 @@ namespace MiyGarden.Service.LeetCode
     {
         public int Number => 101;
 
-        public void Main()
+        public string[] Main()
         {
-            throw new NotImplementedException();
+
+            var result = new string[]
+            {
+            };
+            foreach (var x in result)
+                Console.WriteLine(x);
+            return result;
         }
 
-        //public bool IsSymmetric(TreeNode root)
-        //{
+        public bool IsSymmetric(TreeNode root)
+        {
+            var nodes = new List<int?>();
+            if (root != null)
+            {
 
-        //}
+            }
+
+            return false;
+        }
 
         public class TreeNode
         {

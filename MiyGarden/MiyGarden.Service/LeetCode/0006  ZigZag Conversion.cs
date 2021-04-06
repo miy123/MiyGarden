@@ -8,10 +8,18 @@ namespace MiyGarden.Service.LeetCode
     {
         public int Number => 6;
 
-        public void Main()
+        public string[] Main()
         {
             Console.WriteLine("PAHNAPLSIIGYIR" == this.Convert("PAYPALISHIRING", 3));
             Console.WriteLine("PINALSIGYAHRPI" == this.Convert("PAYPALISHIRING", 4));
+
+            var result = new string[]
+            {
+
+            };
+            foreach (var x in result)
+                Console.WriteLine(x);
+            return result;
         }
 
         /// <summary>
