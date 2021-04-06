@@ -7,7 +7,7 @@ namespace MiyGarden.Service.LeetCode
     {
         public int Number => 5;
 
-        public void Main()
+        public string[] Main()
         {
             Console.WriteLine(this.LongestPalindrome("babad"));
             Console.WriteLine(this.LongestPalindrome("cbbd"));
@@ -18,6 +18,14 @@ namespace MiyGarden.Service.LeetCode
             Console.WriteLine(this.LongestPalindrome("aaaa"));
             Console.WriteLine(this.LongestPalindrome("ccd"));
             Console.WriteLine(this.LongestPalindrome("bananas"));
+
+            var result = new string[]
+            {
+
+            };
+            foreach (var x in result)
+                Console.WriteLine(x);
+            return result;
         }
 
         /// <summary>

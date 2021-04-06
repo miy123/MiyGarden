@@ -8,7 +8,7 @@ namespace MiyGarden.Service.LeetCode
     {
         public int Number => 665;
 
-        public void Main()
+        public string[] Main()
         {
             Console.WriteLine(true + "=" + this.CheckPossibility(new int[] { 4, 2, 3 }));
             Console.WriteLine(false + "=" + this.CheckPossibility(new int[] { 4, 2, 1 }));
@@ -17,6 +17,12 @@ namespace MiyGarden.Service.LeetCode
             Console.WriteLine(false + "=" + this.CheckPossibility(new int[] { 2, 3, 3, 2, 2 }));
             Console.WriteLine(true + "=" + this.CheckPossibility(new int[] { 5, 7, 1, 8 }));
             Console.WriteLine(true + "=" + this.CheckPossibility(new int[] { 1, 4, 1, 2 }));
+            var result = new string[]
+            {
+            };
+            foreach (var x in result)
+                Console.WriteLine(x);
+            return result;
         }
 
         /// <summary>

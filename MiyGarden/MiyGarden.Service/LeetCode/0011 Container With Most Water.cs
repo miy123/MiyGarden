@@ -7,9 +7,15 @@ namespace MiyGarden.Service.LeetCode
     {
         public int Number => 11;
 
-        public void Main()
+        public string[] Main()
         {
-            Console.WriteLine("49=" + this.MaxArea(new int[] { 1, 8, 6, 2, 5, 4, 8, 3, 7 }));
+            var result = new string[]
+            {
+                "49=" + this.MaxArea(new int[] { 1, 8, 6, 2, 5, 4, 8, 3, 7 })
+            };
+            foreach (var x in result)
+                Console.WriteLine(x);
+            return result;
         }
 
         /// <summary>

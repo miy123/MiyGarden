@@ -9,9 +9,15 @@ namespace MiyGarden.Service.LeetCode
     {
         public int Number => 485;
 
-        public void Main()
+        public string[] Main()
         {
             Console.WriteLine(FindMaxConsecutiveOnes(new int[] { 1, 1, 0, 1, 1, 1 }));
+            var result = new string[]
+            {
+            };
+            foreach (var x in result)
+                Console.WriteLine(x);
+            return result;
         }
 
         public int FindMaxConsecutiveOnes(int[] nums)

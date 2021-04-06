@@ -10,7 +10,7 @@ namespace MiyGarden.Service.LeetCode
     {
         public int Number => 666;
 
-        public void Main()
+        public string[] Main()
         {
             //Console.WriteLine(DetermineTriangle(0, 1, 3));
             //Console.WriteLine(DetermineTriangle(1, 1, 3));
@@ -20,6 +20,12 @@ namespace MiyGarden.Service.LeetCode
             //Console.WriteLine(DetermineTriangle(5, 5, 5));
             //Console.WriteLine(DetermineTriangle(10, 10, 13));
             Console.WriteLine(GetCombinedData(new List<string>() { "dd", "aaa" }));
+            var result = new string[]
+            {
+            };
+            foreach (var x in result)
+                Console.WriteLine(x);
+            return result;
         }
 
         ////0 when three integers cannot form a triangle(不是三角形)

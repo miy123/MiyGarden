@@ -9,11 +9,17 @@ namespace MiyGarden.Service.LeetCode
     {
         public int Number => 287;
 
-        public void Main()
+        public string[] Main()
         {
             //Console.WriteLine(this.FindDuplicate(new int[] { 1, 2, 3, 4, 2, 2 }));
             //Console.WriteLine(this.FindDuplicate2(new int[] { 1, 2, 3, 4, 2, 2 }));
             Console.WriteLine(this.FindDuplicate2(new int[] { 13, 46, 8, 11, 20, 17, 40, 13, 13, 13, 14, 1, 13, 36, 48, 41, 13, 13, 13, 13, 45, 13, 28, 42, 13, 10, 15, 22, 13, 13, 13, 13, 23, 9, 6, 13, 47, 49, 16, 13, 13, 39, 35, 13, 32, 29, 13, 25, 30, 13 }));
+            var result = new string[]
+            {
+            };
+            foreach (var x in result)
+                Console.WriteLine(x);
+            return result;
         }
 
         public int FindDuplicate(int[] nums)

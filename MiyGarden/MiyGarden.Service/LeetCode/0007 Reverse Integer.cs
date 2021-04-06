@@ -7,9 +7,15 @@ namespace MiyGarden.Service.LeetCode
     {
         public int Number => 7;
 
-        public void Main()
+        public string[] Main()
         {
-            Console.WriteLine(this.Reverse(-123));
+            var result = new string[]
+            {
+                this.Reverse(-123).ToString()
+            };
+            foreach (var x in result)
+                Console.WriteLine(x);
+            return result;
         }
 
         public int Reverse(int x)

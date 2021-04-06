@@ -10,13 +10,20 @@ namespace MiyGarden.Service.LeetCode
     {
         public int Number => 14;
 
-        public void Main()
+        public string[] Main()
         {
             Console.WriteLine("fl=" + this.LongestCommonPrefix(new string[] { "flower", "flow", "flight" }));
             Console.WriteLine("=" + this.LongestCommonPrefix(new string[] { "dog", "racecar", "car" }));
             //Console.WriteLine("fl=" + this.LongestCommonPrefix2(new string[] { "flower", "flow", "flight" }));
             //Console.WriteLine("=" + this.LongestCommonPrefix2(new string[] { "dog", "racecar", "car" }));
             //Console.WriteLine("a=" + this.LongestCommonPrefix2(new string[] { "aa", "ab" }));
+
+            var result = new string[]
+            {
+            };
+            foreach (var x in result)
+                Console.WriteLine(x);
+            return result;
         }
 
         /// <summary>

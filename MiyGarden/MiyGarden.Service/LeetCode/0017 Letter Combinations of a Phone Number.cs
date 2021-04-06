@@ -8,11 +8,18 @@ namespace MiyGarden.Service.LeetCode
     {
         public int Number => 17;
 
-        public void Main()
+        public string[] Main()
         {
             Console.WriteLine(string.Join(',', LetterCombinations("23")));
             Console.WriteLine(string.Join(',', LetterCombinations("")));
             Console.WriteLine(string.Join(',', LetterCombinations("2")));
+
+            var result = new string[]
+            {
+            };
+            foreach (var x in result)
+                Console.WriteLine(x);
+            return result;
         }
 
         private int _count = 1;

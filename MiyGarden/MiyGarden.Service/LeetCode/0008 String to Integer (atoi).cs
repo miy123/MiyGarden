@@ -7,7 +7,7 @@ namespace MiyGarden.Service.LeetCode
     {
         public int Number => 8;
 
-        public void Main()
+        public string[] Main()
         {
             Console.WriteLine(this.MyAtoi("-123"));
             Console.WriteLine(this.MyAtoi("   -42"));
@@ -18,6 +18,12 @@ namespace MiyGarden.Service.LeetCode
             Console.WriteLine(this.MyAtoi("+"));
             Console.WriteLine(this.MyAtoi("   +0 123"));
             Console.WriteLine(this.MyAtoi(" "));
+            var result = new string[]
+            {
+            };
+            foreach (var x in result)
+                Console.WriteLine(x);
+            return result;
         }
 
         public int MyAtoi(string str)

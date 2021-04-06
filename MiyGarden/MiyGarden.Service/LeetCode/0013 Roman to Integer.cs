@@ -11,7 +11,7 @@ namespace MiyGarden.Service.LeetCode
 
         private int count;
 
-        public void Main()
+        public string[] Main()
         {
             count = 0;
             Console.WriteLine("3=" + this.RomanToInt("III"));
@@ -25,6 +25,13 @@ namespace MiyGarden.Service.LeetCode
             Console.WriteLine("1994=" + this.RomanToInt("MCMXCIV"));
             Console.WriteLine("58=" + this.RomanToInt2("LVIII"));
             Console.WriteLine("1994=" + this.RomanToInt2("MCMXCIV"));
+
+            var result = new string[]
+            {
+            };
+            foreach (var x in result)
+                Console.WriteLine(x);
+            return result;
         }
 
         public int RomanToInt(string s)

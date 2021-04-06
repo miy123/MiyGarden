@@ -7,7 +7,7 @@ namespace MiyGarden.Service.LeetCode
     {
         public int Number => 10;
 
-        public void Main()
+        public string[] Main()
         {
             Console.WriteLine("False=" + this.IsMatch("aa", "a"));
             Console.WriteLine("True=" + this.IsMatch("aa", "a*"));
@@ -23,6 +23,12 @@ namespace MiyGarden.Service.LeetCode
             Console.WriteLine("True=" + this.IsMatch("aab", "c*a*b"));
             Console.WriteLine("True=" + this.IsMatch("aaa", "a*a"));
             Console.WriteLine("True=" + this.IsMatch("abcdcbwcb", ".*cb"));
+            var result = new string[]
+            {
+            };
+            foreach (var x in result)
+                Console.WriteLine(x);
+            return result;
         }
 
         /// <summary>

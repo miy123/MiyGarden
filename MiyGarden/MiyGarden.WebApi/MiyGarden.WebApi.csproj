@@ -15,5 +15,9 @@
     <Folder Include="kubernetes\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\MiyGarden.Service\MiyGarden.Service.csproj" />
+  </ItemGroup>
+
 
 </Project>

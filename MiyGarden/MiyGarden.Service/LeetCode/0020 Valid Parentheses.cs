@@ -9,7 +9,7 @@ namespace MiyGarden.Service.LeetCode
     {
         public int Number => 20;
 
-        public void Main()
+        public string[] Main()
         {
             Console.WriteLine("true = " + IsValid2("()"));
             Console.WriteLine("true = " + IsValid2("()[]{}"));
@@ -20,6 +20,12 @@ namespace MiyGarden.Service.LeetCode
             Console.WriteLine("false = " + IsValid2("(("));
             Console.WriteLine("true = " + IsValid2("(([]){})"));
 
+            var result = new string[]
+            {
+            };
+            foreach (var x in result)
+                Console.WriteLine(x);
+            return result;
         }
 
         private int count;
