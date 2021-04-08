@@ -24,14 +24,13 @@ namespace MiyGarden.Service.LeetCode
 
         public string[] Main()
         {
-            Console.WriteLine("III=" + this.IntToRoman(3));
-            Console.WriteLine("IV=" + this.IntToRoman(4));
-            Console.WriteLine("IX=" + this.IntToRoman(9));
-            Console.WriteLine("LVIII=" + this.IntToRoman(58));
-            Console.WriteLine("MCMXCIV=" + this.IntToRoman(1994));
-
             var result = new string[]
             {
+                "III=" + this.IntToRoman(3),
+                "IV=" + this.IntToRoman(4),
+                "IX=" + this.IntToRoman(9),
+                "LVIII=" + this.IntToRoman(58),
+                "MCMXCIV=" + this.IntToRoman(1994)
             };
             foreach (var x in result)
                 Console.WriteLine(x);

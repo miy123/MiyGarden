@@ -10,10 +10,10 @@ namespace MiyGarden.Service.LeetCode
 
         public string[] Main()
         {
-            Console.WriteLine(ContainsDuplicate(new int[] { 1, 2, 0, 1 }));
-            Console.WriteLine(ContainsDuplicate(new int[] { 1, 2, 3 }));
             var result = new string[]
             {
+                ContainsDuplicate(new int[] { 1, 2, 0, 1 }).ToString(),
+                ContainsDuplicate(new int[] { 1, 2, 3 }).ToString()
             };
             foreach (var x in result)
                 Console.WriteLine(x);

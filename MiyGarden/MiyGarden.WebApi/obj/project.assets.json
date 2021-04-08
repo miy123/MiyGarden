@@ -6291,7 +6291,8 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\user\\.nuget\\packages\\": {},
+    "C:\\Users\\07594.clark.tsai\\.nuget\\packages\\": {},
+    "C:\\Microsoft\\Xamarin\\NuGet\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
@@ -6300,21 +6301,24 @@
       "projectUniqueName": "D:\\git\\github\\MiyGarden\\MiyGarden\\MiyGarden.WebApi\\MiyGarden.WebApi.csproj",
       "projectName": "MiyGarden.WebApi",
       "projectPath": "D:\\git\\github\\MiyGarden\\MiyGarden\\MiyGarden.WebApi\\MiyGarden.WebApi.csproj",
-      "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
+      "packagesPath": "C:\\Users\\07594.clark.tsai\\.nuget\\packages\\",
       "outputPath": "D:\\git\\github\\MiyGarden\\MiyGarden\\MiyGarden.WebApi\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
+        "C:\\Microsoft\\Xamarin\\NuGet\\",
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Users\\07594.clark.tsai\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp3.1"
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "http://proget.agiledeal.com/nuget/backend-third-party": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -6364,7 +6368,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.104\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.103\\RuntimeIdentifierGraph.json"
       }
     }
   },
@@ -6373,7 +6377,7 @@
       "code": "NU1701",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "已使用 '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' 而非專案目標架構 '.NETCoreApp,Version=v3.1' 還原了套件 'Microsoft.AspNet.WebApi.Core 5.2.7'。此套件與您的專案並非完全相容。",
+      "message": "Package 'Microsoft.AspNet.WebApi.Core 5.2.7' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework '.NETCoreApp,Version=v3.1'. This package may not be fully compatible with your project.",
       "libraryId": "Microsoft.AspNet.WebApi.Core",
       "targetGraphs": [
         ".NETCoreApp,Version=v3.1"

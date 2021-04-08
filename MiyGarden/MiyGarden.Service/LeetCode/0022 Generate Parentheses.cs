@@ -12,12 +12,11 @@ namespace MiyGarden.Service.LeetCode
 
         public string[] Main()
         {
-            Console.WriteLine("() = " + string.Join(',', GenerateParenthesis(1)));
-            Console.WriteLine("((())),(()()),(())(),()(()),()()() = " + string.Join(',', GenerateParenthesis(3)));
-            Console.WriteLine("(((()))),((()())),((())()),((()))(),(()(())),(()()()),(()())(),(())(()),(())()(),()((())),()(()()),()(())(),()()(()),()()()() = " + string.Join(',', GenerateParenthesis(4)));
-
             var result = new string[]
             {
+                "() = " + string.Join(',', GenerateParenthesis(1)),
+                "((())),(()()),(())(),()(()),()()() = " + string.Join(',', GenerateParenthesis(3)),
+                "(((()))),((()())),((())()),((()))(),(()(())),(()()()),(()())(),(())(()),(())()(),()((())),()(()()),()(())(),()()(()),()()()() = " + string.Join(',', GenerateParenthesis(4))
             };
             foreach (var x in result)
                 Console.WriteLine(x);

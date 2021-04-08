@@ -9,14 +9,13 @@ namespace MiyGarden.Service.LeetCode
 
         public string[] Main()
         {
-            Console.WriteLine("2=" + this.StrStr("hello", "ll"));
-            Console.WriteLine("-1=" + this.StrStr("aaaaa", "bba"));
-            // Console.WriteLine("-1=" + this.StrStr("a", ""));
-            Console.WriteLine("4=" + this.StrStr("aabaaabaaac", "aabaaac"));
-            Console.WriteLine(string.Join(",", this.GetFailureFunction("aabaaabaaac")));
-
             var result = new string[]
             {
+                "2=" + this.StrStr("hello", "ll"),
+                "-1=" + this.StrStr("aaaaa", "bba"),
+                "-1=" + this.StrStr("a", ""),
+                "4=" + this.StrStr("aabaaabaaac", "aabaaac"),
+                string.Join(",", this.GetFailureFunction("aabaaabaaac"))
             };
             foreach (var x in result)
                 Console.WriteLine(x);

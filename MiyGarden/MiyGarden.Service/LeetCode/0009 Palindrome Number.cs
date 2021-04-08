@@ -13,13 +13,13 @@ namespace MiyGarden.Service.LeetCode
 
         public string[] Main()
         {
-            Console.WriteLine(this.IsPalindrome(-123));
-            Console.WriteLine(this.IsPalindrome(10));
-            Console.WriteLine(this.IsPalindrome(121));
-            Console.WriteLine(this.IsPalindrome(1));
-            Console.WriteLine(this.IsPalindrome(100));
             var result = new string[]
             {
+                this.IsPalindrome(-123).ToString(),
+                this.IsPalindrome(10).ToString(),
+                this.IsPalindrome(121).ToString(),
+                this.IsPalindrome(1).ToString(),
+                this.IsPalindrome(100).ToString()
             };
             foreach (var x in result)
                 Console.WriteLine(x);

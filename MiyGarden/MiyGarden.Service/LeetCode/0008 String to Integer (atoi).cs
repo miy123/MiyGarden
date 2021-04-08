@@ -9,17 +9,17 @@ namespace MiyGarden.Service.LeetCode
 
         public string[] Main()
         {
-            Console.WriteLine(this.MyAtoi("-123"));
-            Console.WriteLine(this.MyAtoi("   -42"));
-            Console.WriteLine(this.MyAtoi("4193 with words"));
-            Console.WriteLine(this.MyAtoi("words and 987"));
-            Console.WriteLine(this.MyAtoi("-91283472332"));
-            Console.WriteLine(this.MyAtoi(""));
-            Console.WriteLine(this.MyAtoi("+"));
-            Console.WriteLine(this.MyAtoi("   +0 123"));
-            Console.WriteLine(this.MyAtoi(" "));
             var result = new string[]
             {
+                this.MyAtoi("-123").ToString(),
+                this.MyAtoi("   -42").ToString(),
+                this.MyAtoi("4193 with words").ToString(),
+                this.MyAtoi("words and 987").ToString(),
+                this.MyAtoi("-91283472332").ToString(),
+                this.MyAtoi("").ToString(),
+                this.MyAtoi("+").ToString(),
+                this.MyAtoi("   +0 123").ToString(),
+                this.MyAtoi(" ").ToString()
             };
             foreach (var x in result)
                 Console.WriteLine(x);

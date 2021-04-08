@@ -1,20 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: webapplication-deployment
+  name: miygardenwebapi-deployment
 spec:
   replicas: 3
   selector:
     matchLabels:
-      app: webappfordemo
+      app: miygardenwebapi
   template:
     metadata:
       labels:
-        app: webappfordemo
+        verison: v1.0.0
+        app: miygardenwebapi
     spec:
       containers:
       - name: miygardenwebapi
-        image: miygardenwebapi:v2
+        image: miygardenwebapi:v1
         imagePullPolicy: Never
         resources:
           limits:

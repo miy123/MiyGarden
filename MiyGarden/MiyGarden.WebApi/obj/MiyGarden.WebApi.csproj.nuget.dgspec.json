@@ -10,21 +10,24 @@
         "projectUniqueName": "D:\\git\\github\\MiyGarden\\MiyGarden\\MiyGarden.Models\\MiyGarden.Models.csproj",
         "projectName": "MiyGarden.Models",
         "projectPath": "D:\\git\\github\\MiyGarden\\MiyGarden\\MiyGarden.Models\\MiyGarden.Models.csproj",
-        "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
+        "packagesPath": "C:\\Users\\07594.clark.tsai\\.nuget\\packages\\",
         "outputPath": "D:\\git\\github\\MiyGarden\\MiyGarden\\MiyGarden.Models\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\",
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\07594.clark.tsai\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "http://proget.agiledeal.com/nuget/backend-third-party": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -67,7 +70,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.104\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.103\\RuntimeIdentifierGraph.json"
         }
       }
     },
@@ -77,21 +80,24 @@
         "projectUniqueName": "D:\\git\\github\\MiyGarden\\MiyGarden\\MiyGarden.Service\\MiyGarden.Service.csproj",
         "projectName": "MiyGarden.Service",
         "projectPath": "D:\\git\\github\\MiyGarden\\MiyGarden\\MiyGarden.Service\\MiyGarden.Service.csproj",
-        "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
+        "packagesPath": "C:\\Users\\07594.clark.tsai\\.nuget\\packages\\",
         "outputPath": "D:\\git\\github\\MiyGarden\\MiyGarden\\MiyGarden.Service\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\",
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\07594.clark.tsai\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "http://proget.agiledeal.com/nuget/backend-third-party": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -152,7 +158,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.104\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.103\\RuntimeIdentifierGraph.json"
         }
       }
     },
@@ -162,21 +168,24 @@
         "projectUniqueName": "D:\\git\\github\\MiyGarden\\MiyGarden\\MiyGarden.WebApi\\MiyGarden.WebApi.csproj",
         "projectName": "MiyGarden.WebApi",
         "projectPath": "D:\\git\\github\\MiyGarden\\MiyGarden\\MiyGarden.WebApi\\MiyGarden.WebApi.csproj",
-        "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
+        "packagesPath": "C:\\Users\\07594.clark.tsai\\.nuget\\packages\\",
         "outputPath": "D:\\git\\github\\MiyGarden\\MiyGarden\\MiyGarden.WebApi\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\",
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\07594.clark.tsai\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "http://proget.agiledeal.com/nuget/backend-third-party": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -226,7 +235,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.104\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.103\\RuntimeIdentifierGraph.json"
         }
       }
     }

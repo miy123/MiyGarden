@@ -10,12 +10,11 @@ namespace MiyGarden.Service.LeetCode
 
         public string[] Main()
         {
-            Console.WriteLine(string.Join(',', LetterCombinations("23")));
-            Console.WriteLine(string.Join(',', LetterCombinations("")));
-            Console.WriteLine(string.Join(',', LetterCombinations("2")));
-
             var result = new string[]
             {
+                string.Join(',', LetterCombinations("23")),
+                string.Join(',', LetterCombinations("")),
+                string.Join(',', LetterCombinations("2"))
             };
             foreach (var x in result)
                 Console.WriteLine(x);

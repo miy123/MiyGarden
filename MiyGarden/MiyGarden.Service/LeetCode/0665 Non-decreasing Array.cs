@@ -10,15 +10,15 @@ namespace MiyGarden.Service.LeetCode
 
         public string[] Main()
         {
-            Console.WriteLine(true + "=" + this.CheckPossibility(new int[] { 4, 2, 3 }));
-            Console.WriteLine(false + "=" + this.CheckPossibility(new int[] { 4, 2, 1 }));
-            Console.WriteLine(false + "=" + this.CheckPossibility(new int[] { 3, 4, 2, 3 }));
-            Console.WriteLine(true + "=" + this.CheckPossibility(new int[] { -1, 4, 2, 3 }));
-            Console.WriteLine(false + "=" + this.CheckPossibility(new int[] { 2, 3, 3, 2, 2 }));
-            Console.WriteLine(true + "=" + this.CheckPossibility(new int[] { 5, 7, 1, 8 }));
-            Console.WriteLine(true + "=" + this.CheckPossibility(new int[] { 1, 4, 1, 2 }));
             var result = new string[]
-            {
+            {           
+                true + "=" + this.CheckPossibility(new int[] { 4, 2, 3 }),
+                false + "=" + this.CheckPossibility(new int[] { 4, 2, 1 }),            
+                false + "=" + this.CheckPossibility(new int[] { 3, 4, 2, 3 }),            
+                true + "=" + this.CheckPossibility(new int[] { -1, 4, 2, 3 }),           
+                false + "=" + this.CheckPossibility(new int[] { 2, 3, 3, 2, 2 }),            
+                true + "=" + this.CheckPossibility(new int[] { 5, 7, 1, 8 }),
+                true + "=" + this.CheckPossibility(new int[] { 1, 4, 1, 2 })
             };
             foreach (var x in result)
                 Console.WriteLine(x);

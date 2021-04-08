@@ -11,9 +11,9 @@ namespace MiyGarden.Service.LeetCode
 
         public string[] Main()
         {
-            Console.WriteLine(FindMaxConsecutiveOnes(new int[] { 1, 1, 0, 1, 1, 1 }));
             var result = new string[]
             {
+                FindMaxConsecutiveOnes(new int[] { 1, 1, 0, 1, 1, 1 }).ToString()
             };
             foreach (var x in result)
                 Console.WriteLine(x);

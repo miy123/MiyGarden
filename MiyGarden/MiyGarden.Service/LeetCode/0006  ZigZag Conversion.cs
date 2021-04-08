@@ -10,12 +10,10 @@ namespace MiyGarden.Service.LeetCode
 
         public string[] Main()
         {
-            Console.WriteLine("PAHNAPLSIIGYIR" == this.Convert("PAYPALISHIRING", 3));
-            Console.WriteLine("PINALSIGYAHRPI" == this.Convert("PAYPALISHIRING", 4));
-
             var result = new string[]
             {
-
+                "PAHNAPLSIIGYIR=" + this.Convert("PAYPALISHIRING", 3),
+                "PINALSIGYAHRPI=" + this.Convert("PAYPALISHIRING", 4)
             };
             foreach (var x in result)
                 Console.WriteLine(x);

@@ -8,20 +8,20 @@ namespace MiyGarden.Service.LeetCode
 {
     public class DetermineTriangles : ILeetCode
     {
-        public int Number => 666;
+        public int Number => 9999;
 
         public string[] Main()
         {
-            //Console.WriteLine(DetermineTriangle(0, 1, 3));
-            //Console.WriteLine(DetermineTriangle(1, 1, 3));
-            //Console.WriteLine(DetermineTriangle(3, 4, 5));
-            //Console.WriteLine(DetermineTriangle(3, 3, 3));
-            //Console.WriteLine(DetermineTriangle(4, 4, 5));
-            //Console.WriteLine(DetermineTriangle(5, 5, 5));
-            //Console.WriteLine(DetermineTriangle(10, 10, 13));
-            Console.WriteLine(GetCombinedData(new List<string>() { "dd", "aaa" }));
             var result = new string[]
             {
+                DetermineTriangle(0, 1, 3).ToString(),
+                DetermineTriangle(1, 1, 3).ToString(),
+                DetermineTriangle(3, 4, 5).ToString(),
+                DetermineTriangle(3, 3, 3).ToString(),
+                DetermineTriangle(4, 4, 5).ToString(),
+                DetermineTriangle(5, 5, 5).ToString(),
+                DetermineTriangle(10, 10, 13).ToString(),
+                GetCombinedData(new List<string>() { "dd", "aaa" })
             };
             foreach (var x in result)
                 Console.WriteLine(x);

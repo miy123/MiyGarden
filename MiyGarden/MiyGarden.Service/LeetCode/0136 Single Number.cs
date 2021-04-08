@@ -12,11 +12,11 @@ namespace MiyGarden.Service.LeetCode
 
         public string[] Main()
         {
-            //Console.WriteLine("1=" + SingleNumber(new int[] { 2, 2, 1 }));
-            Console.WriteLine("4=" + SingleNumber(new int[] { 9, 4, 1, 2, 1, 6, 2, 9, 6 }));
-            //Console.WriteLine("1=" + SingleNumber(new int[] { 1 }));
             var result = new string[]
             {
+                "1=" + SingleNumber(new int[] { 2, 2, 1 }),
+                "4=" + SingleNumber(new int[] { 9, 4, 1, 2, 1, 6, 2, 9, 6 }),
+                "1=" + SingleNumber(new int[] { 1 })
             };
             foreach (var x in result)
                 Console.WriteLine(x);

@@ -9,22 +9,23 @@ namespace MiyGarden.Service.LeetCode
 
         public string[] Main()
         {
-            Console.WriteLine("False=" + this.IsMatch("aa", "a"));
-            Console.WriteLine("True=" + this.IsMatch("aa", "a*"));
-            Console.WriteLine("True=" + this.IsMatch("ab", ".b"));
-            Console.WriteLine("True=" + this.IsMatch("abcdw", ".*"));
-            Console.WriteLine("True=" + this.IsMatch("abcdw", "a.*"));
-            Console.WriteLine("False=" + this.IsMatch("mississippi", "mis*is*p*."));
-            Console.WriteLine("True=" + this.IsMatch("mississippi", "mis*is*ip*."));
-            Console.WriteLine("True=" + this.IsMatch("", ""));
-            Console.WriteLine("False=" + this.IsMatch("a", ""));
-            Console.WriteLine("False=" + this.IsMatch("", "a"));
-            Console.WriteLine("True=" + this.IsMatch("", "a*"));
-            Console.WriteLine("True=" + this.IsMatch("aab", "c*a*b"));
-            Console.WriteLine("True=" + this.IsMatch("aaa", "a*a"));
-            Console.WriteLine("True=" + this.IsMatch("abcdcbwcb", ".*cb"));
+
             var result = new string[]
             {
+            "False=" + this.IsMatch("aa", "a"),
+            "True=" + this.IsMatch("aa", "a*"),
+            "True=" + this.IsMatch("ab", ".b"),
+            "True=" + this.IsMatch("abcdw", ".*"),
+            "True=" + this.IsMatch("abcdw", "a.*"),
+            "False=" + this.IsMatch("mississippi", "mis*is*p*."),
+            "True=" + this.IsMatch("mississippi", "mis*is*ip*."),
+            "True=" + this.IsMatch("", ""),
+            "False=" + this.IsMatch("a", ""),
+            "False=" + this.IsMatch("", "a"),
+            "True=" + this.IsMatch("", "a*"),
+            "True=" + this.IsMatch("aab", "c*a*b"),
+            "True=" + this.IsMatch("aaa", "a*a"),
+            "True=" + this.IsMatch("abcdcbwcb", ".*cb")
             };
             foreach (var x in result)
                 Console.WriteLine(x);

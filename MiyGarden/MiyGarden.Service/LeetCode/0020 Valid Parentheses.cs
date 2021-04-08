@@ -11,17 +11,16 @@ namespace MiyGarden.Service.LeetCode
 
         public string[] Main()
         {
-            Console.WriteLine("true = " + IsValid2("()"));
-            Console.WriteLine("true = " + IsValid2("()[]{}"));
-            Console.WriteLine("false = " + IsValid2("(]"));
-            Console.WriteLine("false = " + IsValid2("([)]"));
-            Console.WriteLine("true = " + IsValid2("{[]}"));
-            Console.WriteLine("false = " + IsValid2("["));
-            Console.WriteLine("false = " + IsValid2("(("));
-            Console.WriteLine("true = " + IsValid2("(([]){})"));
-
             var result = new string[]
             {
+                "true = " + IsValid2("()"),
+                "true = " + IsValid2("()[]{}"),
+            "false = " + IsValid2("(]"),
+            "false = " + IsValid2("([)]"),
+            "true = " + IsValid2("{[]}"),
+            "false = " + IsValid2("["),
+            "false = " + IsValid2("(("),
+            "true = " + IsValid2("(([]){})")
             };
             foreach (var x in result)
                 Console.WriteLine(x);

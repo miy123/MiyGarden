@@ -9,11 +9,11 @@ namespace MiyGarden.Service.LeetCode
 
         public string[] Main()
         {
-            Console.WriteLine("5=" + MaxProfit(new int[] { 7, 1, 5, 3, 6, 4 }));
-            Console.WriteLine("0=" + MaxProfit(new int[] { 7, 6, 4, 3, 1 }));
-            Console.WriteLine("4=" + MaxProfit(new int[] { 7, 5, 3, 6, 4, 1, 5 }));
             var result = new string[]
             {
+                "5=" + MaxProfit(new int[] { 7, 1, 5, 3, 6, 4 }),
+                "0=" + MaxProfit(new int[] { 7, 6, 4, 3, 1 }),
+                "4=" + MaxProfit(new int[] { 7, 5, 3, 6, 4, 1, 5 })
             };
             foreach (var x in result)
                 Console.WriteLine(x);

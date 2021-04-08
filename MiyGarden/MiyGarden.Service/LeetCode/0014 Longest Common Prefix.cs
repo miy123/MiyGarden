@@ -12,14 +12,14 @@ namespace MiyGarden.Service.LeetCode
 
         public string[] Main()
         {
-            Console.WriteLine("fl=" + this.LongestCommonPrefix(new string[] { "flower", "flow", "flight" }));
-            Console.WriteLine("=" + this.LongestCommonPrefix(new string[] { "dog", "racecar", "car" }));
             //Console.WriteLine("fl=" + this.LongestCommonPrefix2(new string[] { "flower", "flow", "flight" }));
             //Console.WriteLine("=" + this.LongestCommonPrefix2(new string[] { "dog", "racecar", "car" }));
             //Console.WriteLine("a=" + this.LongestCommonPrefix2(new string[] { "aa", "ab" }));
 
             var result = new string[]
             {
+                "fl=" + this.LongestCommonPrefix(new string[] { "flower", "flow", "flight" }),
+                "=" + this.LongestCommonPrefix(new string[] { "dog", "racecar", "car" }),
             };
             foreach (var x in result)
                 Console.WriteLine(x);

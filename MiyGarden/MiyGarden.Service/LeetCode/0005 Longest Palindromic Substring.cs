@@ -9,19 +9,17 @@ namespace MiyGarden.Service.LeetCode
 
         public string[] Main()
         {
-            Console.WriteLine(this.LongestPalindrome("babad"));
-            Console.WriteLine(this.LongestPalindrome("cbbd"));
-            Console.WriteLine(this.LongestPalindrome("bb"));
-            Console.WriteLine(this.LongestPalindrome("ccc"));
-            Console.WriteLine(this.LongestPalindrome("bccb"));
-            Console.WriteLine(this.LongestPalindrome("bccc"));
-            Console.WriteLine(this.LongestPalindrome("aaaa"));
-            Console.WriteLine(this.LongestPalindrome("ccd"));
-            Console.WriteLine(this.LongestPalindrome("bananas"));
-
             var result = new string[]
             {
-
+                this.LongestPalindrome("babad"),
+                this.LongestPalindrome("cbbd"),
+                this.LongestPalindrome("bb"),
+                this.LongestPalindrome("ccc"),
+                this.LongestPalindrome("bccb"),
+                this.LongestPalindrome("bccc"),
+                this.LongestPalindrome("aaaa"),
+                this.LongestPalindrome("ccd"),
+                this.LongestPalindrome("bananas")
             };
             foreach (var x in result)
                 Console.WriteLine(x);

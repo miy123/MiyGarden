@@ -1,4 +1,5 @@
 ﻿using MiyGarden.Service.Interfaces;
+using Newtonsoft.Json;
 using System;
 
 namespace MiyGarden.Service.LeetCode
@@ -9,10 +10,9 @@ namespace MiyGarden.Service.LeetCode
 
         public string[] Main()
         {
-            Console.WriteLine(RemoveNthFromEnd(new ListNode() { val = 1, next = new ListNode() { val = 2, next = new ListNode() { val = 3, next = new ListNode() { val = 4, next = new ListNode() { val = 5 } } } } }, 2));
-
             var result = new string[]
             {
+               JsonConvert.SerializeObject(RemoveNthFromEnd(new ListNode() { val = 1, next = new ListNode() { val = 2, next = new ListNode() { val = 3, next = new ListNode() { val = 4, next = new ListNode() { val = 5 } } } } }, 2))
             };
             foreach (var x in result)
                 Console.WriteLine(x);
