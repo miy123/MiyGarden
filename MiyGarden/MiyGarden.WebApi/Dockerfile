@@ -8,6 +8,8 @@ EXPOSE 443
 FROM mcr.microsoft.com/dotnet/core/sdk:3.1-buster AS build
 WORKDIR /src
 COPY ["MiyGarden.WebApi/MiyGarden.WebApi.csproj", "MiyGarden.WebApi/"]
+COPY ["MiyGarden.Service/MiyGarden.Service.csproj", "MiyGarden.Service/"]
+COPY ["MiyGarden.Models/MiyGarden.Models.csproj", "MiyGarden.Models/"]
 RUN dotnet restore "MiyGarden.WebApi/MiyGarden.WebApi.csproj"
 COPY . .
 WORKDIR "/src/MiyGarden.WebApi"

@@ -15,8 +15,8 @@ spec:
     spec:
       containers:
       - name: miygardenwebapi
-        image: miygardenwebapi:v1
-        imagePullPolicy: Never
+        image: miy123/miygardenwebapi:v1
+        imagePullPolicy: IfNotPresent
         resources:
           limits:
             memory: "128Mi"
