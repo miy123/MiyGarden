@@ -64,12 +64,26 @@ namespace MiyGarden.WorkSpace
 
         static void Main(string[] args)
         {
-            var str = "{\"Name\":\"clark\",\"MediaType\":2,\"MediaType123\":2}";
-            var model = JsonConvert.DeserializeObject<Person>(str);
-            Console.WriteLine(model.MediaType);
-            var a = Ha();
-            var b = Ha1();
-            var c = Ha2();
+            string docPath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
+            Task.Factory.StartNew(() =>
+            {
+                Thread.Sleep(3000);
+                using (StreamWriter outputFile = new StreamWriter(Path.Combine(docPath, "WriteLines.txt"), true))
+                {
+                    outputFile.WriteLine("inner:" + Thread.CurrentThread.ManagedThreadId + DateTime.Now + "IsBackground:" + Thread.CurrentThread.IsBackground + ",IsThreadPoolThread:" + Thread.CurrentThread.IsThreadPoolThread);
+                }
+            });
+            using (StreamWriter outputFile = new StreamWriter(Path.Combine(docPath, "WriteLines.txt"), true))
+            {
+                outputFile.WriteLine("out:" + Thread.CurrentThread.ManagedThreadId + DateTime.Now + "IsBackground:" + Thread.CurrentThread.IsBackground + ",IsThreadPoolThread:" + Thread.CurrentThread.IsThreadPoolThread);
+            }
+            //new BaccaratProcess().Main();
+            //var str = "{\"Name\":\"clark\",\"MediaType\":2,\"MediaType123\":2}";
+            //var model = JsonConvert.DeserializeObject<Person>(str);
+            //Console.WriteLine(model.MediaType);
+            //var a = Ha();
+            //var b = Ha1();
+            //var c = Ha2();
 
             // await new TaskTest().StartTest();
             //new Kmp().Main();

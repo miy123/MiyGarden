@@ -62,3 +62,8 @@ D:\git\github\MiyGarden\MiyGarden\MiyGarden.WebApi\bin\Debug\netcoreapp3.1\MiyGa
 D:\git\github\MiyGarden\MiyGarden\MiyGarden.WebApi\bin\Debug\netcoreapp3.1\MiyGarden.Service.pdb
 D:\git\github\MiyGarden\MiyGarden\MiyGarden.WebApi\bin\Debug\netcoreapp3.1\MiyGarden.Models.pdb
 D:\git\github\MiyGarden\MiyGarden\MiyGarden.WebApi\obj\Debug\netcoreapp3.1\scopedcss\bundle\MiyGarden.WebApi.styles.css
+D:\git\github\MiyGarden\MiyGarden\MiyGarden.WebApi\bin\Debug\netcoreapp3.1\Others\BacData\210401-b01-01.json
+D:\git\github\MiyGarden\MiyGarden\MiyGarden.WebApi\bin\Debug\netcoreapp3.1\Others\BacData\210401-b01-02.json
+D:\git\github\MiyGarden\MiyGarden\MiyGarden.WebApi\bin\Debug\netcoreapp3.1\Others\BacData\210401-b01-03.json
+D:\git\github\MiyGarden\MiyGarden\MiyGarden.WebApi\bin\Debug\netcoreapp3.1\Others\BacData\210401-b01-04.json
+D:\git\github\MiyGarden\MiyGarden\MiyGarden.WebApi\bin\Debug\netcoreapp3.1\Others\BacData\210401-b01-05.json
