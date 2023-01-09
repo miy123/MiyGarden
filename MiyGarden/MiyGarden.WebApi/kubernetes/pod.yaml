@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: webappfordemo
+  labels:
+    app: webappfordemo
+spec:
+  containers:
+  - name: webappfordemo
+    image: webapplicationfordemo:latest
+    imagePullPolicy: Never
+    resources:
+      limits:
+        memory: "128Mi"
+        cpu: "500m"
+    ports:
+      - containerPort: 80

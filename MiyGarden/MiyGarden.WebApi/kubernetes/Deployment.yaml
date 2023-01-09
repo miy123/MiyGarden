@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: miygardenwebapi-deployment
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: miygardenwebapi
+  template:
+    metadata:
+      labels:
+        verison: v1.0.0
+        app: miygardenwebapi
+    spec:
+      containers:
+      - name: miygardenwebapi
+        image: miy123/miygardenwebapi:v1
+        imagePullPolicy: IfNotPresent
+        resources:
+          limits:
+            memory: "128Mi"
+            cpu: "100m"
+        ports:
+        - containerPort: 80

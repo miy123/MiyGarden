@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: miygardenwebapisvc
+spec:
+  type: NodePort
+  selector:
+    verison: v1.0.0
+    app: miygardenwebapi
+  ports:
+  - protocol: TCP
+    port: 80
+    targetPort: 80
+    nodePort: 31000
