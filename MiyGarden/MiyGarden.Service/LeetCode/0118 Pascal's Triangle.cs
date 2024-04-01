@@ -21,10 +21,10 @@ namespace MiyGarden.Service.LeetCode
             return result;
         }
 
-        public IList<IList<int>> Generate(int numRows)
-        {
-            if(numRows == 0) return new List
+        //public IList<IList<int>> Generate(int numRows)
+        //{
+        //    if(numRows == 0) return new List
 
-        }
+        //}
     }
 }
