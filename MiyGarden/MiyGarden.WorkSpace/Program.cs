@@ -1,5 +1,4 @@
-﻿using MiyGarden.Service.Algorithm;
-using MiyGarden.Service.Linq;
+﻿using MiyGarden.Service.Linq;
 using MiyGarden.Service.Others;
 using System;
 using System.Collections.Generic;
@@ -59,10 +58,7 @@ namespace MiyGarden.WorkSpace
             //new StreamTest().CreateOrWrite();
             //new DecroratorPattern().StartTest();
             //StartFileStream();
-
-            List<int> nums = new List<int>() { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12 };
-            int k = 4;
-            Permute(nums, k);
+            new Zodiac().Main();
         }
 
         private static void CollectionTest()
@@ -212,31 +208,6 @@ namespace MiyGarden.WorkSpace
 
                     result.Add(hex.ToString());
                 }
-            }
-        }
-
-        /// <summary>
-        /// 組合
-        /// </summary>
-        /// <param name="list"></param>
-        /// <param name="k"></param>
-        /// <param name="result"></param>
-        public static void Permute(List<int> list, int k, List<int> result = null)
-        {
-            result ??= new List<int>();
-            if (k == 0)
-            {
-                Console.WriteLine(string.Join(", ", result));
-                return;
-            }
-
-            for (int i = 0; i < list.Count; i++)
-            {
-                result.Add(list[i]);
-                var remainingList = new List<int>(list);
-                remainingList.RemoveAt(i);
-                Permute(remainingList, k - 1, result);
-                result.RemoveAt(result.Count - 1);
             }
         }
     }

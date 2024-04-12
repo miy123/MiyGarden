@@ -75,5 +75,59 @@ namespace MiyGarden.Service.Algorithm
         //    }
         //    return descending ? -c : c;
         //}
+
+        public void QuickSort2(int[] source, int left, int right)
+        {
+            if (left < 0 || right < 0 || right <= left) return;
+            var pivot = source[left];
+            var i1 = left;
+            var i2 = right;
+            var stop = false;
+            do
+            {
+                for (var i = i1; i < source.Length; i++)
+                {
+                    if (i >= i2)
+                    {
+                        stop = true;
+                        break;
+                    }
+
+                    if (source[i] > pivot)
+                    {
+                        i1 = i;
+                        break;
+                    }
+                }
+
+                if (!stop)
+                {
+                    for (var i = i2; i > 0; i--)
+                    {
+                        if (source[i] < pivot)
+                        {
+                            i2 = i;
+                            break;
+                        }
+                    }
+                    (source[i2], source[i1]) = (source[i1], source[i2]);
+                }
+            } while (!stop);
+
+            if (i1 == left) (source[i1], source[right]) = (source[right], source[i1]);
+            else (source[i1], source[left]) = (source[left], source[i1]);
+            if (i1 == i2)
+            {
+                QuickSort2(source, left, i1 - 1);
+                QuickSort2(source, i1, i1);
+                QuickSort2(source, i2 + 1, right);
+            }
+            else
+            {
+                QuickSort2(source, left, i1 - 1);
+                QuickSort2(source, i1, i1);
+                QuickSort2(source, i2, right);
+            }
+        }
     }
 }
