@@ -1,5 +1,4 @@
-﻿using MiyGarden.Service.Algorithm;
-using MiyGarden.Service.Others;
+﻿using MiyGarden.Service.Others;
 using System;
 using System.Collections.Generic;
 using System.Text.RegularExpressions;
@@ -28,7 +27,7 @@ namespace MiyGarden.WorkSpace
             //new DecroratorPattern().StartTest();
             //new Zodiac().Main();
             //new BaccaratProcess().Main();
-            new IdGenTest().Main();
+            //new IdGenTest().Main();
         }
 
         /// <summary>
