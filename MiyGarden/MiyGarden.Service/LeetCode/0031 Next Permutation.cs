@@ -1,5 +1,4 @@
 ﻿using MiyGarden.Service.Interfaces;
-using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -40,46 +39,67 @@ namespace MiyGarden.Service.LeetCode
         public int Number => 31;
         public string[] Main()
         {
-            NextPermutation(new int[] { 1, 2, 3 });
-            NextPermutation(new int[] { 1, 2, 3, 4 });
+            //[1,2,3], [1,3,2], [2, 1, 3], [2, 3, 1], [3,1,2], [3,2,1]
+            //NextPermutation(new int[] { 1, 2, 3 });
+            //NextPermutation(new int[] { 1, 3, 2 });
+            //NextPermutation(new int[] { 2, 1, 3 });
+            //NextPermutation(new int[] { 2, 3, 1 });
+            //NextPermutation(new int[] { 3, 1, 2 });
+            //NextPermutation(new int[] { 3, 2, 1 });
+
+            //NextPermutation(new int[] { 1, 1, 5 });
+            //NextPermutation(new int[] { 1, 2, 3, 4 });
+
+            //NextPermutation(new int[] { 1, 5, 1 });
+            NextPermutation(new int[] { 1, 2, 0, 3, 0, 1, 2, 4 });
+
             return new string[] { };
         }
 
         public void NextPermutation(int[] nums)
         {
+            if (nums.Length == 0) return;
             var freeList = nums.OrderBy(x => x).ToList();
             var count = 0;
-            var currenct = new List<int>();
+            var currenct = new List<int>(nums.Length);
             NextPermutation(nums, 0, freeList, currenct, ref count);
+            if (currenct.Count == 0) currenct = freeList;
+            for (var i = 0; i < currenct.Count; i++)
+            {
+                nums[i] = currenct[i];
+            }
         }
 
         private void NextPermutation(int[] nums, int i, List<int> orderedFreeList, List<int> currentList, ref int count)
         {
+            var hash = new HashSet<int>();
             for (var k = 0; k < orderedFreeList.Count; k++)
             {
                 if (orderedFreeList[k] == nums[i] || count == 1)
                 {
-                    var nextOrderedFreeList = orderedFreeList.Except(new List<int>() { orderedFreeList[k] }).ToList();
+                    if (!hash.Add(orderedFreeList[k])) continue;
+                    var nextOrderedFreeList = new List<int>(orderedFreeList);
+                    nextOrderedFreeList.RemoveAt(k);
                     currentList.Add(orderedFreeList[k]);
                     if (nextOrderedFreeList.Count == 0)
                     {
-                        Console.WriteLine(string.Join(",", currentList));
                         if (count == 1)
                         {
-                            Console.WriteLine("end.");
                             count++;
+                            return;
                         }
                         else
                         {
                             count++;
-                            currentList.Remove(orderedFreeList[k]);
+                            currentList.RemoveAt(currentList.Count - 1);
+                            return;
                         }
                     }
 
                     NextPermutation(nums, i + 1, nextOrderedFreeList, currentList, ref count);
-                    if (count == 1) currentList.Remove(orderedFreeList[k]);
+                    if (count == 1) currentList.RemoveAt(currentList.Count - 1);
                 }
-                if (count == 2) continue;
+                if (count == 2) return;
             }
         }
     }
