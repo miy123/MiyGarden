@@ -1,5 +1,6 @@
 ﻿using MiyGarden.Service.Interfaces;
 using System;
+using System.Collections.Generic;
 
 namespace MiyGarden.Service.LeetCode
 {
@@ -12,7 +13,8 @@ namespace MiyGarden.Service.LeetCode
             var result = new string[]
             {
                 "0,1=" + string.Join(',', this.TwoSum(new int[] { 2, 7, 11, 15 }, 9)),
-                "0,1=" + string.Join(',', this.TwoSum1(new int[] { 2, 7, 11, 15 }, 9))
+                "0,1=" + string.Join(',', this.TwoSum1(new int[] { 2, 7, 11, 15 }, 9)),
+                "0,1=" + string.Join(',', this.TwoSum2(new int[] { 2, 7, 11, 15 }, 9))
             };
             foreach (var x in result)
                 Console.WriteLine(x);
@@ -55,6 +57,18 @@ namespace MiyGarden.Service.LeetCode
                         return new int[] { i, j };
                 }
             }
+            throw new Exception("");
+        }
+
+        public int[] TwoSum2(int[] nums, int target)
+        {
+            var diff = new Dictionary<int, int>(nums.Length);
+            for (var i = 0; i < nums.Length; i++)
+            {
+                if (diff.ContainsKey(nums[i])) return new int[] { i, diff[nums[i]] };
+                else diff.TryAdd(target - nums[i], i);
+            }
+
             throw new Exception("");
         }
     }
