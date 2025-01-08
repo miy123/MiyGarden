@@ -1,7 +1,10 @@
 ﻿using MiyGarden.Service.Others;
 using System;
 using System.Collections.Generic;
+using System.Net.Http;
 using System.Text.RegularExpressions;
+using System.Threading;
+using System.Threading.Tasks;
 
 namespace MiyGarden.WorkSpace
 {
@@ -25,9 +28,33 @@ namespace MiyGarden.WorkSpace
             //new LockTest().Main();
             //new StreamTest().CreateOrWrite();
             //new DecroratorPattern().StartTest();
-            //new Zodiac().Main();
+            // new Zodiac().Main();
             //new BaccaratProcess().Main();
             //new IdGenTest().Main();
+
+            Console.WriteLine("MainO" + Thread.CurrentThread.ManagedThreadId);
+            Task.Run(async () =>
+            {
+                Console.WriteLine("MainI" + Thread.CurrentThread.ManagedThreadId);
+                var a = Tettt();
+                for (var i = 0; i < 9999; i++)
+                {
+                    Console.Write("Main" + i);
+                }
+                await a;
+                Console.WriteLine("Main" + Thread.CurrentThread.ManagedThreadId);
+            }).Wait();
+        }
+
+        private static async Task Tettt()
+        {
+            Console.WriteLine("Tettt" + Thread.CurrentThread.ManagedThreadId);
+            await Task.Delay(500);
+            for (var i = 0; i < 2; i++)
+            {
+                Console.Write("Tettt" + i);
+            }
+            Console.WriteLine("Tettt" + Thread.CurrentThread.ManagedThreadId);
         }
 
         /// <summary>

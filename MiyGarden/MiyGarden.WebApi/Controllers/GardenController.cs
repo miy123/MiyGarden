@@ -5,6 +5,8 @@ using MiyGarden.Service.Interfaces;
 using System;
 using System.Linq;
 using System.Reflection;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace MiyGarden.WebApi.Controllers
 {
@@ -34,11 +36,32 @@ namespace MiyGarden.WebApi.Controllers
             return Ok(result);
         }
 
-        [Route("[action]")]
+        [Route("Test")]
         [HttpGet]
-        public ActionResult Test()
+        public async Task<string> Test()
         {
-            return Ok();
+            var st = new StringBuilder();
+            st.AppendLine("MainI" + Environment.CurrentManagedThreadId);
+            var t = TestAsync(st);
+            for (var i = 0; i < 99999; i++)
+            {
+                st.Append("Main" + i);
+            }
+            await t;
+            st.AppendLine("Main" + Environment.CurrentManagedThreadId);
+
+            return st.ToString();
+        }
+
+        private async Task TestAsync(StringBuilder st)
+        {
+            st.AppendLine("Tettt" + Environment.CurrentManagedThreadId);
+            await Task.Delay(500);
+            for (var i = 0; i < 2; i++)
+            {
+                st.Append("Tettt" + i);
+            }
+            st.AppendLine("Tettt" + Environment.CurrentManagedThreadId);
         }
     }
 }
