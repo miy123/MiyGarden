@@ -17,7 +17,7 @@ namespace MiyGarden.LeetCode
                 .SelectMany(x => x.GetExportedTypes().Where(y => typeof(ILeetCode).IsAssignableFrom(y) && !y.IsInterface))
                 .Select(p => (ILeetCode)Activator.CreateInstance(p))
                 .FirstOrDefault(x => x.Number == short.Parse(numberString));
-            if (leetCode != null) leetCode.Main();
+            if (leetCode != null) foreach (var str in leetCode.Main()) Console.WriteLine(str);
             else Console.WriteLine("尚無此題號");
         }
     }
