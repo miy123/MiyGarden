@@ -45,9 +45,7 @@ namespace MiyGarden.Service.Algorithm
                     if (i > j) break;
                     if (i < j)
                     {
-                        int temp = map[i];
-                        map[i] = map[j];
-                        map[j] = temp;
+                        (map[j], map[i]) = (map[i], map[j]);
                     }
                     i++;
                     j--;
@@ -127,6 +125,32 @@ namespace MiyGarden.Service.Algorithm
                 QuickSort2(source, left, i1 - 1);
                 QuickSort2(source, i1, i1);
                 QuickSort2(source, i2, right);
+            }
+        }
+
+        public void QuickSortInPlace(int[] array, int low, int high)
+        {
+            if (low < high)
+            {
+                // Partition the array and get the pivot index
+                // Choose the last element as the pivot
+                int i = low - 1;
+                for (int j = low; j < high; j++)
+                {
+                    if (array[j] <= array[high])
+                    {
+                        i++;
+                        (array[i], array[j]) = (array[j], array[i]);
+                    }
+                }
+
+                // Place the pivot in its correct position
+                (array[i + 1], array[high]) = (array[high], array[i + 1]);
+                int pivotIndex = i + 1;
+
+                // Recursively sort elements before and after partition
+                QuickSortInPlace(array, low, pivotIndex - 1);
+                QuickSortInPlace(array, pivotIndex + 1, high);
             }
         }
     }

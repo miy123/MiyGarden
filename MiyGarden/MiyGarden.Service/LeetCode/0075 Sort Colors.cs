@@ -26,63 +26,85 @@ namespace MiyGarden.Service.LeetCode
         {
             return new string[]
             {
-                //"0,0,1,1,2,2=" + string.Join(',',this.SortColors(new int[] { 2, 0, 2, 1, 1, 0 })),
-                //"0,1,2=" + string.Join(',',this.SortColors(new int[] { 2, 0, 1 })),
-                //"0,1=" + string.Join(',',this.SortColors(new int[] { 0, 1 })),
-                //"0,1,2=" + string.Join(',',this.SortColors(new int[] { 0, 2, 1 })),
+                "0,0,1,1,2,2,2,2=" + string.Join(',', this.SortColors(new int[] { 0, 2, 2, 2, 0, 2, 1, 1 })),
+                "0,1,2=" + string.Join(',',this.SortColors(new int[] { 1,2,0 })),
+                "0,1,2=" + string.Join(',',this.SortColors(new int[] { 1, 0, 2 })),
+                "0,0,1,1,2,2=" + string.Join(',',this.SortColors(new int[] { 2, 0, 2, 1, 1, 0 })),
+                "0,1,2=" + string.Join(',',this.SortColors(new int[] { 2, 0, 1 })),
+                "0,1=" + string.Join(',',this.SortColors(new int[] { 0, 1 })),
+                "0,1,2=" + string.Join(',',this.SortColors(new int[] { 0, 2, 1 })),
                 "0,0,0,1,1,1=" + string.Join(',',this.SortColors(new int[] { 0,0,1,0,1,1 })),
             };
         }
 
         public int[] SortColors(int[] nums)
         {
-            Sort(nums, 0, nums.Length - 1);
+            QuickSortInPlace(nums, 0, nums.Length - 1);
             return nums;
         }
 
         private void Sort(int[] nums, int first, int last)
         {
-            if (first >= last) return;
-            var lastJ = last;
-            var p = nums[first];
-            for (var i = first + 1; i <= lastJ; i++)
+            if (first >= last || last - first < 1) return;
+            if (last - first == 1)
             {
-                if (nums[i] > p)
+                if (nums[first] > nums[last]) (nums[last], nums[first]) = (nums[first], nums[last]);
+                return;
+            }
+            var p = nums[first];
+            var lj = last;
+            var ll = -1;
+            for (var i = first; i <= lj; i++)
+            {
+                if (nums[i] >= p)
                 {
-                    for (var j = lastJ; j > i; j--)
+                    var ch = false;
+                    for (var j = lj; j > i; j--)
                     {
+                        lj = j - 1;
                         if (nums[j] < p)
                         {
                             (nums[j], nums[i]) = (nums[i], nums[j]);
-                            lastJ = j - 1;
+                            if (lj == i) ch = true;
                             break;
                         }
                     }
-                }
-                else if (nums[i] == p)
-                {
-                    for (var j = lastJ; j > i; j--)
+
+                    if (i == lj)
                     {
-                        if (nums[j] < p)
-                        {
-                            (nums[j], nums[i]) = (nums[i], nums[j]);
-                            lastJ = j - 1;
-                            break;
-                        }
+                        if (i == first || ch) ll = lj;
+                        else ll = lj - 1;
                     }
                 }
             }
 
-            if (nums[first] >= nums[lastJ])
+            Sort(nums, first, ll);
+            Sort(nums, ll + 1, last);
+        }
+
+        private void QuickSortInPlace(int[] array, int low, int high)
+        {
+            if (low < high)
             {
-                (nums[first], nums[lastJ]) = (nums[lastJ], nums[first]);
-                Sort(nums, first, lastJ - 1);
-                Sort(nums, lastJ + 1, last);
-            }
-            else
-            {
-                Sort(nums, first, lastJ - 1);
-                Sort(nums, lastJ, last);
+                // Partition the array and get the pivot index
+                // Choose the last element as the pivot
+                int i = low - 1;
+                for (int j = low; j < high; j++)
+                {
+                    if (array[j] <= array[high])
+                    {
+                        i++;
+                        (array[i], array[j]) = (array[j], array[i]);
+                    }
+                }
+
+                // Place the pivot in its correct position
+                (array[i + 1], array[high]) = (array[high], array[i + 1]);
+                int pivotIndex = i + 1;
+
+                // Recursively sort elements before and after partition
+                QuickSortInPlace(array, low, pivotIndex - 1);
+                QuickSortInPlace(array, pivotIndex + 1, high);
             }
         }
     }
