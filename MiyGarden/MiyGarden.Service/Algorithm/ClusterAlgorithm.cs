@@ -300,10 +300,7 @@ namespace MiyGarden.Service.Algorithm
         /// <returns></returns>
         private static int GetRandomSeed()
         {
-            byte[] bytes = new byte[4];
-            RNGCryptoServiceProvider rng = new RNGCryptoServiceProvider();
-            rng.GetBytes(bytes);
-            return BitConverter.ToInt32(bytes, 0);
+            return RandomNumberGenerator.GetInt32(int.MinValue, int.MaxValue);
         }
 
         /// <summary>

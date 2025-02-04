@@ -1,70 +1,75 @@
 ﻿using MiyGarden.Service.Async;
 using System;
+using System.Collections.Generic;
 using System.Threading;
+using System.Threading.Tasks;
 
 namespace MiyGarden.Async
 {
     static class Program
     {
-        static void Main(string[] args)
+        static async Task Main(string[] args)
         {
             new LoginAsyncTest().Main();
             new TaskAsync().StartThread(5);
             new YieldTest().Test3();
-            StartStreamTest();
+            await StartStreamTestAsync();
         }
 
-        private static void StartStreamTest()
+        private static async Task StartStreamTestAsync()
         {
-            //ThreadPool.SetMaxThreads(5, 5);
             ShowMessage("Main threadId is:", false);
-            #region 非同步線程池
+
+            var tasks = new List<Task>();
+            CancellationTokenSource cts = new CancellationTokenSource();
+
+            #region 非同步線程池 (ThreadPool -> Task.Run)
             for (var i = 0; i < 100; i++)
             {
-                ThreadPool.QueueUserWorkItem(new WaitCallback((state) =>
+                string taskName = $"PoolAsync({i})";
+                tasks.Add(Task.Run(() =>
                 {
-                    ShowMessage((string)state + " threadId is:", false);
-                    ShowMessage((string)state + " thread close");
-                }), "PoolAsync(" + i + ")");
+                    ShowMessage(taskName + " threadId is:", false);
+                    ShowMessage(taskName + " thread close");
+                }));
             }
             #endregion
-            #region 非同步線程
-            Thread thread = new Thread(new ThreadStart(() =>
+
+            #region 非同步線程 (Thread -> Task with CancellationToken)
+            tasks.Add(Task.Run(async () =>
             {
                 try
                 {
                     ShowMessage("Async threadId is:");
                     for (int n = 0; n < 10; n++)
                     {
-                        //当n等于4时，终止线程
                         if (n >= 4)
                         {
-                            Thread.CurrentThread.Abort(n);
+                            cts.Cancel(); // 取消請求
                         }
-                        Console.WriteLine("The number is:" + n.ToString());
+
+                        if (cts.Token.IsCancellationRequested)
+                        {
+                            Console.WriteLine($"Thread abort when the number is: {n}!");
+                            break;
+                        }
+
+                        Console.WriteLine("The number is:" + n);
+                        await Task.Delay(500); // 模擬工作
                     }
                 }
-                catch (ThreadAbortException ex)
+                catch (OperationCanceledException)
                 {
-                    //输出终止线程时n的值
-                    if (ex.ExceptionState != null)
-                        Console.WriteLine(string.Format("Thread abort when the number is: {0}!",
-                                                         ex.ExceptionState.ToString()));
-
-                    //取消终止，继续执行线程
-                    Thread.ResetAbort();
-                    Console.WriteLine("Async Thread ResetAbort!");
+                    Console.WriteLine("Async Thread Canceled!");
                 }
-                //线程结束
-                Console.WriteLine("Async Thread Close!");
-            }))
-            {
-                IsBackground = true
-            };
-            //thread.Start();
-            //thread.Join();
+                finally
+                {
+                    Console.WriteLine("Async Thread Close!");
+                }
+            }, cts.Token));
             #endregion
-            //WaitHandle.WaitAll();
+
+            await Task.WhenAll(tasks); // 等待所有任務完成
             ShowMessage("Main thread close");
         }
 

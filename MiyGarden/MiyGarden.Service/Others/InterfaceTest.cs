@@ -8,7 +8,7 @@ namespace MiyGarden.Service.Others
 {
     public interface IMiyAble<out T> : IMiyAble, IQAQAble<T>, IQAQAble, IEnumerable<T>, IEnumerable
     {
-        IMiyAble<T> GetMiytor();
+        new IMiyAble<T> GetMiytor();
     }
 
     public interface IMiyAble : IQAQAble, IEnumerable
@@ -18,7 +18,7 @@ namespace MiyGarden.Service.Others
 
     public interface IQAQAble<out T> : IQAQAble
     {
-        IQAQAble<T> GetQAQtor();
+        new IQAQAble<T> GetQAQtor();
     }
 
     public interface IQAQAble
@@ -36,6 +36,8 @@ namespace MiyGarden.Service.Others
         {
             _enumerable = enumerable;
             _expression = Expression.Constant(this);
+            _qaqable = null;
+            _miyable = null;
         }
 
         IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics.CodeAnalysis;
 using System.DirectoryServices;
 using System.DirectoryServices.AccountManagement;
 using System.DirectoryServices.Protocols;
@@ -6,6 +7,7 @@ using System.Net;
 
 namespace MiyGarden.Service.LDAP
 {
+    [SuppressMessage("Compiler", "CA1416")]
     public class LDAPSvc
     {
         public string AuthAD_PrincipalSearcher()
@@ -52,7 +54,7 @@ namespace MiyGarden.Service.LDAP
                 else
                     return false;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 return false;// ex.Message;
             }
@@ -111,7 +113,7 @@ namespace MiyGarden.Service.LDAP
                     ldap.Bind(new NetworkCredential(userDN, pass));
                     return true;
                 }
-                catch (Exception ex)
+                catch (Exception)
                 {
                     return false;
                 }

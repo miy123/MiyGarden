@@ -19,8 +19,6 @@ namespace MiyGarden.Service.Pattrens
 
     public class SwordCharacterWrapper : CharacterWrapper
     {
-        public Character _character;
-
         public SwordCharacterWrapper(Character character) : base(character)
         {
             this.Name = "神劍一把";

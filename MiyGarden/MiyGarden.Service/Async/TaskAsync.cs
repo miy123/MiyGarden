@@ -23,7 +23,7 @@ namespace MiyGarden.Service.Async
                     {
                         await this.DoSomeee(tokenSource.Token);
                     }
-                    catch (Exception ex)
+                    catch (Exception)
                     {
                         tokenSource.Cancel();
                     }

@@ -13,7 +13,7 @@ namespace MiyGarden.Service.Algorithm
         {
             var epoch = new DateTime(2017, 7, 1, 0, 0, 0, DateTimeKind.Utc);
             var generatorID = GetGeneratorID(3);
-            var gen = new IdGenerator(generatorID, epoch);
+            var gen = new IdGenerator(generatorID, new IdGeneratorOptions(timeSource: new DefaultTimeSource(epoch)));
             Console.WriteLine("generatorID_10:" + generatorID);
             Console.WriteLine("generatorID_2:" + Convert.ToString(generatorID, 2));
             for (var i = 0; i < 100; i++)

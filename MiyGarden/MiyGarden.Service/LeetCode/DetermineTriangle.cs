@@ -90,7 +90,7 @@ namespace MiyGarden.Service.LeetCode
             }
 
             return sb.ToString();
-            return data.Aggregate((a, b) => $"\"{a}\", \"{b}\"");
+            //return data.Aggregate((a, b) => $"\"{a}\", \"{b}\"");
         }
     }
 }
