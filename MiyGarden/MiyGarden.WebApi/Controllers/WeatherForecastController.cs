@@ -28,6 +28,7 @@ namespace MiyGarden.WebApi.Controllers
         public IEnumerable<WeatherForecast> Get()
         {
             var rng = new Random();
+            var a = Summaries.CountBy(x => x);
             return Enumerable.Range(1, 5).Select(index => new WeatherForecast
             {
                 Date = DateTime.Now.AddDays(index),
