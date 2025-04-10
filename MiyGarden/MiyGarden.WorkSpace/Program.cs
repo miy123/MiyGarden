@@ -8,10 +8,11 @@ using System.Threading.Tasks;
 
 namespace MiyGarden.WorkSpace
 {
-    static class Program
+    static partial class Program
     {
         static void Main(string[] args)
         {
+            TestGenerator.Hello("Generated Code");
             //new BtreeValidator().Start2();
             //Console.WriteLine(new LDAPSvc().AuthAD_LdapConnection());
             //new TaskCancel().Main3();
@@ -28,22 +29,22 @@ namespace MiyGarden.WorkSpace
             //new LockTest().Main();
             //new StreamTest().CreateOrWrite();
             //new DecroratorPattern().StartTest();
-            // new Zodiac().Main();
+            //new Zodiac().Main();
             //new BaccaratProcess().Main();
             //new IdGenTest().Main();
 
-            Console.WriteLine("MainO" + Thread.CurrentThread.ManagedThreadId);
-            Task.Run(async () =>
-            {
-                Console.WriteLine("MainI" + Thread.CurrentThread.ManagedThreadId);
-                var a = Tettt();
-                for (var i = 0; i < 9999; i++)
-                {
-                    Console.Write("Main" + i);
-                }
-                await a;
-                Console.WriteLine("Main" + Thread.CurrentThread.ManagedThreadId);
-            }).Wait();
+            //Console.WriteLine("MainO" + Thread.CurrentThread.ManagedThreadId);
+            //Task.Run(async () =>
+            //{
+            //    Console.WriteLine("MainI" + Thread.CurrentThread.ManagedThreadId);
+            //    var a = Tettt();
+            //    for (var i = 0; i < 9999; i++)
+            //    {
+            //        Console.Write("Main" + i);
+            //    }
+            //    await a;
+            //    Console.WriteLine("Main" + Thread.CurrentThread.ManagedThreadId);
+            //}).Wait();
         }
 
         private static async Task Tettt()

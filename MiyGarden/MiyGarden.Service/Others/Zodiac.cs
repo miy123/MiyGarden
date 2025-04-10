@@ -12,6 +12,7 @@ namespace MiyGarden.Service.Others
     {
         public void Main()
         {
+            //var a = ConstStrings.Person;
             var nums = new List<int>() { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12 };
             var config2 = GetConfig(nums, 2);
             var config3 = GetConfig(nums, 3);
