@@ -1,7 +1,7 @@
-﻿using MiyGarden.Service.Others;
+﻿using MiyGarden.Service.Linq;
+using MiyGarden.Service.Others;
 using System;
 using System.Collections.Generic;
-using System.Net.Http;
 using System.Text.RegularExpressions;
 using System.Threading;
 using System.Threading.Tasks;
@@ -10,9 +10,15 @@ namespace MiyGarden.WorkSpace
 {
     static partial class Program
     {
+
         static void Main(string[] args)
         {
-            TestGenerator.Hello("Generated Code");
+            SpracheTest.Main();
+            //MinTest.Test();
+            // StackallocTest.Test();
+            //var person = new NewPerson() { Name = "神秘人" };
+            //var person2 = new NewPerson2() { Name = "神秘人2" };
+            //TestGenerator.Hello("Generated Code:" + person.Name + person2.Name);
             //new BtreeValidator().Start2();
             //Console.WriteLine(new LDAPSvc().AuthAD_LdapConnection());
             //new TaskCancel().Main3();

@@ -1,0 +1,6 @@
+D:\github\MiyGarden\MiyGarden\SourceGenerator\obj\Debug\net9.0\SourceGenerator.csproj.AssemblyReference.cache
+D:\github\MiyGarden\MiyGarden\SourceGenerator\obj\Debug\net9.0\SourceGenerator.GeneratedMSBuildEditorConfig.editorconfig
+D:\github\MiyGarden\MiyGarden\SourceGenerator\obj\Debug\net9.0\SourceGenerator.AssemblyInfoInputs.cache
+D:\github\MiyGarden\MiyGarden\SourceGenerator\obj\Debug\net9.0\SourceGenerator.AssemblyInfo.cs
+D:\github\MiyGarden\MiyGarden\SourceGenerator\obj\Debug\net9.0\SourceGenerator.csproj.CoreCompileInputs.cache
+D:\github\MiyGarden\MiyGarden\SourceGenerator\obj\Debug\net9.0\SourceGenerator.sourcelink.json

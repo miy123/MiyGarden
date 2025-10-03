@@ -1,0 +1,1 @@
+record NewPerson [int Age, string Name, bool IsActive] record NewPerson2 [int Age, string Name, bool IsActive]
